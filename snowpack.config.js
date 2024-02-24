@@ -11,7 +11,8 @@ module.exports = {
     },
   ],
   mount: {
-     src: '/'
+     // src: '/',
+     dist: '/' // use for prod mode
   },
   plugins: [
     /* ... */

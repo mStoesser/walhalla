@@ -1,6 +1,7 @@
 import {html, render} from "lit-html";
 import {getItem, setItem} from "../service/storage-service";
 import {asSpeed, asTime, getSpeed} from "../service/util";
+import Chart from 'chart.js/auto';
 export class HomeStart extends HTMLElement {
 
     totalTime = 8 * 60 * 60
@@ -10,9 +11,17 @@ export class HomeStart extends HTMLElement {
     tickedRoutes = []
     speedData = []
 
+    chart = null
+
     connectedCallback() {
         this.load()
         this.render()
+        this.setupChart()
+        window.addEventListener("resize", this.onResize.bind(this));
+    }
+
+    onResize(e) {
+        this.setCanvasSize()
     }
 
     load() {
@@ -40,6 +49,8 @@ export class HomeStart extends HTMLElement {
         const lastSpeed = this.getSpeed(2)
         const speedChange = currentSpeed - lastSpeed;
         render(html`
+             <tick-routes @ticked="${e=>this.routeTicked(e.detail)}"></tick-routes>
+            
              <div class="overview-grid">
                 <span class="green">${asTime(timeGone)}</span>
                 <span class="red">${asTime(this.totalTime - timeGone)}</span>
@@ -52,9 +63,21 @@ export class HomeStart extends HTMLElement {
                      <span>${asSpeed(lastSpeed)}</span>
                      <span class="${speedChange >= 0 ? 'green' : 'red'}">(${asSpeed(speedChange)})</span>
                  </span>
-            </div>
+             </div>
+
+             <div id="chart" style=""><canvas></canvas></div>
             
-            <tick-routes @ticked="${e=>this.routeTicked(e.detail)}"></tick-routes>
+             <div>
+                 ${this.tickedRoutes.map(route => {
+                     return html`
+                         <div class="route ticked">
+                             <span>${route.line.substring(0, 3)}</span>
+                             <span>${route['route-links']}</span>
+                             <span>${route['vr-grade']}</span>
+                             <span>${route.height}m</span>
+                         </div>
+                 `})}
+             </div>
             
             ${this.started ? html`
                 <button @click="${_=>this.reset()}">reset</button>`
@@ -69,12 +92,17 @@ export class HomeStart extends HTMLElement {
         setItem('tickedRoutes', this.tickedRoutes)
         const meterDone =  this.meterDone + parseFloat(route.height)
         const meterDoneAt = Math.floor(new Date().getTime() / 1000)
+        const speed = getSpeed(meterDone, meterDoneAt, this.started)
         this.speedData.push({
             meter: meterDone,
             time: meterDoneAt,
-            speed: getSpeed(meterDone, meterDoneAt, this.started)
+            speed: speed
         })
         setItem('speedData', this.speedData)
+        this.chart.data.labels.push(asTime(meterDoneAt - this.started));
+        this.chart.data.datasets[0].data.push(speed)
+        this.chart.data.datasets[1].data.push(meterDone)
+        this.chart.update();
         this.render()
     }
 
@@ -100,9 +128,59 @@ export class HomeStart extends HTMLElement {
     }
 
     startInterval() {
-        this.intervalTimer = setInterval(()=>{
-            this.render()
-        }, 1000)
+        this.intervalTimer = setInterval(()=> this.render(), 1000)
+    }
+
+    setCanvasSize() {
+        if (this.canvas) {
+            const width = Math.floor(Math.min(window.innerWidth * 0.9, 800.0))
+            const height = Math.floor(width * 0.5)
+            this.canvas.style.width = width+'px'
+            this.canvas.style.height = height+'px'
+        }
+        if (this.chart) this.chart.update()
+    }
+
+    setupChart() {
+        this.canvas = this.querySelector('#chart canvas')
+        this.setCanvasSize()
+        this.chart = new Chart(this.canvas
+            , {
+                type: 'line',
+                data: {
+                    labels: this.speedData.map(item=>asTime(item.time - this.started)),
+                    datasets: [
+                        {
+                            label: 'Speed',
+                            data: this.speedData.map(item=>item.speed),
+                            yAxisID: 'y',
+                        },
+                        {
+                            label: 'Total Meter',
+                            data: this.speedData.map(item=>item.meter),
+                            yAxisID: 'y1',
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            grid: {
+                                drawOnChartArea: false,
+                            },
+                        },
+                    }
+                }
+            })
     }
 }
 
