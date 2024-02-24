@@ -6,7 +6,7 @@ const config = {
     input: "src/app.js",
     output: {
         format: "esm",
-        file: "dist/app.js",
+        file: "docs/app.js",
     },
     plugins: [
         babel({
@@ -18,15 +18,15 @@ const config = {
         json(),
         copy({
             targets: [
-                { src: 'src/index.html', dest: 'dist/' },
-                { src: 'src/service-worker.js', dest: 'dist/' },
-                { src: 'src/style.css', dest: 'dist/' },
-                { src: 'src/assets/routes.json', dest: 'dist/assets/' },
-                { src: 'src/assets/icon-512.png', dest: 'dist/assets/' },
-                { src: 'src/assets/icon-256.png', dest: 'dist/assets/' },
-                { src: 'src/assets/icon-128.png', dest: 'dist/assets/' },
-                { src: 'src/assets/icon-maskable.png', dest: 'dist/assets/' },
-                { src: 'src/manifest.json', dest: 'dist/' },
+                { src: 'src/index.html', dest: 'docs/' },
+                { src: 'src/service-worker.js', dest: 'docs/' },
+                { src: 'src/style.css', dest: 'docs/' },
+                { src: 'src/assets/routes.json', dest: 'docs/assets/' },
+                { src: 'src/assets/icon-512.png', dest: 'docs/assets/' },
+                { src: 'src/assets/icon-256.png', dest: 'docs/assets/' },
+                { src: 'src/assets/icon-128.png', dest: 'docs/assets/' },
+                { src: 'src/assets/icon-maskable.png', dest: 'docs/assets/' },
+                { src: 'src/manifest.json', dest: 'docs/' },
             ]
         })
     ],

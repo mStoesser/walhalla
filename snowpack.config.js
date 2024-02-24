@@ -12,7 +12,7 @@ module.exports = {
   ],
   mount: {
      // src: '/',
-     dist: '/' // use for prod mode
+     docs: '/' // use for prod mode
   },
   plugins: [
     /* ... */
