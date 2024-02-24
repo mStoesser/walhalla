@@ -1,6 +1,7 @@
 import { babel } from "@rollup/plugin-babel";
 import json from "@rollup/plugin-json";
 import copy from "rollup-plugin-copy";
+import nodeResolve from "@rollup/plugin-node-resolve";
 
 const config = {
     input: "src/app.js",
@@ -9,6 +10,7 @@ const config = {
         file: "docs/app.js",
     },
     plugins: [
+        nodeResolve(),
         babel({
             exclude: "node_modules/**",
             presets: ["@babel/preset-env"],
