@@ -13,7 +13,7 @@ export class TickRoutes extends HTMLElement {
     }
 
     load() {
-        fetch(`/assets/routes.json`).then(r=>r.json()).then(routes => {
+        fetch(`/walhalla/assets/routes.json`).then(r=>r.json()).then(routes => {
             this.routes = routes
             this.render()
         })

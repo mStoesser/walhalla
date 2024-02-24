@@ -7,12 +7,12 @@ module.exports = {
     {
       match: 'routes',
       src: '.*',
-      dest: '/index.html',
+      dest: '/walhalla/index.html',
     },
   ],
   mount: {
-     // src: '/',
-     docs: '/' // use for prod mode
+     // src: '/walhalla/',
+     docs: '/walhalla/' // use for prod mode
   },
   plugins: [
     /* ... */
@@ -25,7 +25,8 @@ module.exports = {
     /*external: ['value-multiselect'],*/
   },
   devOptions: {
-    port: 3000
+    port: 3000,
+    openUrl: 'http://localhost:3000/walhalla/'
     /* ... */
   },
   buildOptions: {

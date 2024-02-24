@@ -391,7 +391,7 @@ var TickRoutes = /*#__PURE__*/function (_HTMLElement) {
     key: "load",
     value: function load() {
       var _this2 = this;
-      fetch("/assets/routes.json").then(function (r) {
+      fetch("/walhalla/assets/routes.json").then(function (r) {
         return r.json();
       }).then(function (routes) {
         _this2.routes = routes;
@@ -466,8 +466,8 @@ customElements.define("tick-routes", TickRoutes);
 // if (config.mode === 'PROD') {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/service-worker.js', {
-      scope: '/',
+    navigator.serviceWorker.register('/walhalla/service-worker.js', {
+      scope: '/walhalla/',
       type: "module"
     }).then(function (registration) {
       // Registration was successful

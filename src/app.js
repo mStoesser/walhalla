@@ -6,7 +6,7 @@ import './service/storage-service.js'
 // if (config.mode === 'PROD') {
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/service-worker.js', { scope: '/', type: "module" }).then(function(registration) {
+            navigator.serviceWorker.register('/walhalla/service-worker.js', { scope: '/walhalla/', type: "module" }).then(function(registration) {
                 // Registration was successful
                 console.log('Registered!');
             }, function(err) {
