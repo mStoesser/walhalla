@@ -22,7 +22,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/",
+  "start_url": "/walhalla/",
   "background_color": "#ffffff",
   "theme_color": "#304FFE",
   "display": "standalone"
