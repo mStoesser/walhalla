@@ -1,6 +1,6 @@
 import {html, render} from "lit-html";
 import {getItem, setItem} from "../service/storage-service";
-import {asSpeed, asTime, getSpeed} from "../service/util";
+import {asSpeed, asTime, getSpeed, parseTime} from "../service/util";
 import Chart from 'chart.js/auto';
 export class HomeStart extends HTMLElement {
 
@@ -53,10 +53,26 @@ export class HomeStart extends HTMLElement {
             
              <div class="overview-grid">
                 <span class="green">${asTime(timeGone)}</span>
-                <span class="red">${asTime(this.totalTime - timeGone)}</span>
+                 ${this.started ? html`
+                     <span class="red">${asTime(this.totalTime - timeGone)}</span>
+                 ` : html`
+                     <div>
+                         <span class="red">${asTime(this.totalTime - timeGone)}</span>
+                         <input type="text" name="time" value="${asTime(this.totalTime)}">
+                         <button @click="${_=>this.setTotalTime()}">SET</button>
+                     </div>
+                 `}
                 
                 <span class="green">${this.meterDone} m</span>
-                <span class="red">${this.totalMeter - this.meterDone} m</span>
+                 ${this.started ? html`
+                     <span class="red">${this.totalMeter - this.meterDone} m</span>
+                 ` : html`
+                     <div>
+                         <span class="red">${this.totalMeter - this.meterDone} m</span>
+                         <input type="number" name="meter" value="${this.totalMeter}">
+                         <button @click="${_=>this.setTotalMeter()}">SET</button>
+                     </div>
+                 `}
 
                  <span class="${currentSpeed > this.aimedSpeed ? 'green' : 'red'}">${asSpeed(currentSpeed)}</span>
                  <span class="${lastSpeed > this.aimedSpeed ? 'green' : 'red'}">
@@ -103,6 +119,18 @@ export class HomeStart extends HTMLElement {
         this.chart.data.datasets[0].data.push(speed)
         this.chart.data.datasets[1].data.push(meterDone)
         this.chart.update();
+        this.render()
+    }
+
+    setTotalTime() {
+        this.totalTime = parseTime(this.querySelector('input[name=time]').value)
+        setItem('totalTime', this.totalTime)
+        this.render()
+    }
+
+    setTotalMeter() {
+        this.totalMeter = this.querySelector('input[name=meter]').value
+        setItem('totalMeter', this.totalMeter)
         this.render()
     }
 

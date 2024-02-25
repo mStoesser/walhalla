@@ -23,7 +23,7 @@
     }
   ],
   "start_url": "/walhalla/",
-  "background_color": "#ffffff",
-  "theme_color": "#304FFE",
+  "background_color": "#212121",
+  "theme_color": "#ffb300",
   "display": "standalone"
 }

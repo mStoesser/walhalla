@@ -175,6 +175,10 @@ function getSpeed(meter, tickTime, startTime) {
 function asSpeed(speed) {
   return speed == null ? 0.0.toFixed(2) : speed.toFixed(2);
 }
+function parseTime(timeStr) {
+  var part = timeStr.split(':');
+  return parseInt(part[0]) * 3600 + parseInt(part[1]) * 60 + parseInt(part[2]);
+}
 function asTime(totalSeconds) {
   return new Date(totalSeconds * 1000).toISOString().substring(11, 19);
   // const hours = Math.floor(totalSeconds / 3600);
@@ -14950,7 +14954,7 @@ const registerables = [
 Chart$1.register(...registerables);
 var Chart = Chart$1;
 
-var _templateObject$1, _templateObject2$1, _templateObject3$1, _templateObject4$1;
+var _templateObject$1, _templateObject2$1, _templateObject3$1, _templateObject4$1, _templateObject5$1, _templateObject6, _templateObject7, _templateObject8;
 var HomeStart = /*#__PURE__*/function (_HTMLElement) {
   _inherits(HomeStart, _HTMLElement);
   function HomeStart() {
@@ -15013,13 +15017,17 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
       var currentSpeed = this.getSpeed(1);
       var lastSpeed = this.getSpeed(2);
       var speedChange = currentSpeed - lastSpeed;
-      j(x(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral(["\n             <tick-routes @ticked=\"", "\"></tick-routes>\n            \n             <div class=\"overview-grid\">\n                <span class=\"green\">", "</span>\n                <span class=\"red\">", "</span>\n                \n                <span class=\"green\">", " m</span>\n                <span class=\"red\">", " m</span>\n\n                 <span class=\"", "\">", "</span>\n                 <span class=\"", "\">\n                     <span>", "</span>\n                     <span class=\"", "\">(", ")</span>\n                 </span>\n             </div>\n\n             <div id=\"chart\" style=\"\"><canvas></canvas></div>\n            \n             <div>\n                 ", "\n             </div>\n            \n            ", "\n        "])), function (e) {
+      j(x(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral(["\n             <tick-routes @ticked=\"", "\"></tick-routes>\n            \n             <div class=\"overview-grid\">\n                <span class=\"green\">", "</span>\n                 ", "\n                \n                <span class=\"green\">", " m</span>\n                 ", "\n\n                 <span class=\"", "\">", "</span>\n                 <span class=\"", "\">\n                     <span>", "</span>\n                     <span class=\"", "\">(", ")</span>\n                 </span>\n             </div>\n\n             <div id=\"chart\" style=\"\"><canvas></canvas></div>\n            \n             <div>\n                 ", "\n             </div>\n            \n            ", "\n        "])), function (e) {
         return _this2.routeTicked(e.detail);
-      }, asTime(timeGone), asTime(this.totalTime - timeGone), this.meterDone, this.totalMeter - this.meterDone, currentSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(currentSpeed), lastSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(lastSpeed), speedChange >= 0 ? 'green' : 'red', asSpeed(speedChange), this.tickedRoutes.map(function (route) {
-        return x(_templateObject2$1 || (_templateObject2$1 = _taggedTemplateLiteral(["\n                         <div class=\"route ticked\">\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "m</span>\n                         </div>\n                 "])), route.line.substring(0, 3), route['route-links'], route['vr-grade'], route.height);
-      }), this.started ? x(_templateObject3$1 || (_templateObject3$1 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">reset</button>"])), function (_) {
+      }, asTime(timeGone), this.started ? x(_templateObject2$1 || (_templateObject2$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", "</span>\n                 "])), asTime(this.totalTime - timeGone)) : x(_templateObject3$1 || (_templateObject3$1 = _taggedTemplateLiteral(["\n                     <div>\n                         <span class=\"red\">", "</span>\n                         <input type=\"text\" name=\"time\" value=\"", "\">\n                         <button @click=\"", "\">SET</button>\n                     </div>\n                 "])), asTime(this.totalTime - timeGone), asTime(this.totalTime), function (_) {
+        return _this2.setTotalTime();
+      }), this.meterDone, this.started ? x(_templateObject4$1 || (_templateObject4$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", " m</span>\n                 "])), this.totalMeter - this.meterDone) : x(_templateObject5$1 || (_templateObject5$1 = _taggedTemplateLiteral(["\n                     <div>\n                         <span class=\"red\">", " m</span>\n                         <input type=\"number\" name=\"meter\" value=\"", "\">\n                         <button @click=\"", "\">SET</button>\n                     </div>\n                 "])), this.totalMeter - this.meterDone, this.totalMeter, function (_) {
+        return _this2.setTotalMeter();
+      }), currentSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(currentSpeed), lastSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(lastSpeed), speedChange >= 0 ? 'green' : 'red', asSpeed(speedChange), this.tickedRoutes.map(function (route) {
+        return x(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n                         <div class=\"route ticked\">\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "m</span>\n                         </div>\n                 "])), route.line.substring(0, 3), route['route-links'], route['vr-grade'], route.height);
+      }), this.started ? x(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">reset</button>"])), function (_) {
         return _this2.reset();
-      }) : x(_templateObject4$1 || (_templateObject4$1 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">start</button>\n            "])), function (_) {
+      }) : x(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">start</button>\n            "])), function (_) {
         return _this2.start();
       })), this);
     }
@@ -15041,6 +15049,20 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
       this.chart.data.datasets[0].data.push(speed);
       this.chart.data.datasets[1].data.push(meterDone);
       this.chart.update();
+      this.render();
+    }
+  }, {
+    key: "setTotalTime",
+    value: function setTotalTime() {
+      this.totalTime = parseTime(this.querySelector('input[name=time]').value);
+      setItem('totalTime', this.totalTime);
+      this.render();
+    }
+  }, {
+    key: "setTotalMeter",
+    value: function setTotalMeter() {
+      this.totalMeter = this.querySelector('input[name=meter]').value;
+      setItem('totalMeter', this.totalMeter);
       this.render();
     }
   }, {
