@@ -169,8 +169,8 @@ function setItem(key, value) {
   localStorage.setItem("".concat(prefix).concat(key), JSON.stringify(value));
 }
 
-function getSpeed(meter, tickTime, startTime) {
-  return meter / ((tickTime - startTime) / 60);
+function getSpeed(meter, timeInSec) {
+  return meter / (timeInSec / 60);
 }
 function asSpeed(speed) {
   return speed == null ? 0.0.toFixed(2) : speed.toFixed(2);
@@ -178,6 +178,9 @@ function asSpeed(speed) {
 function parseTime(timeStr) {
   var part = timeStr.split(':');
   return parseInt(part[0]) * 3600 + parseInt(part[1]) * 60 + parseInt(part[2]);
+}
+function asMinuteTime(totalSeconds) {
+  return new Date(totalSeconds * 1000).toISOString().substring(14, 19);
 }
 function asTime(totalSeconds) {
   return new Date(totalSeconds * 1000).toISOString().substring(11, 19);
@@ -15000,7 +15003,7 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "meterDone",
     get: function get() {
-      return this.speedData.length > 0 ? this.speedData[this.speedData.length - 1].meter : 0;
+      return this.speedData.length > 0 ? this.speedData[this.speedData.length - 1].meterTotal : 0;
     }
   }, {
     key: "getSpeed",
@@ -15010,20 +15013,33 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
       return current ? current.speed : 0.0;
     }
   }, {
+    key: "getLastTime",
+    value: function getLastTime() {
+      var i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      var current = this.speedData.length >= i ? this.speedData[this.speedData.length - i] : null;
+      return current ? current.time : this.started || 0.0;
+    }
+  }, {
+    key: "getLastTimeTook",
+    value: function getLastTimeTook() {
+      var i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+      var current = this.speedData.length >= i ? this.speedData[this.speedData.length - i] : null;
+      return current ? current.timeTook : 0.0;
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
-      var timeGone = this.started ? Math.floor(new Date().getTime() / 1000) - this.started : 0;
+      var currentTime = Math.floor(new Date().getTime() / 1000);
+      var timeGone = this.started ? currentTime - this.started : 0;
       var currentSpeed = this.getSpeed(1);
       var lastSpeed = this.getSpeed(2);
       var speedChange = currentSpeed - lastSpeed;
-      j(x(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral(["\n             <tick-routes @ticked=\"", "\"></tick-routes>\n            \n             <div class=\"overview-grid\">\n                <span class=\"green\">", "</span>\n                 ", "\n                \n                <span class=\"green\">", " m</span>\n                 ", "\n\n                 <span class=\"", "\">", "</span>\n                 <span class=\"", "\">\n                     <span>", "</span>\n                     <span class=\"", "\">(", ")</span>\n                 </span>\n             </div>\n\n             <div id=\"chart\" style=\"\"><canvas></canvas></div>\n            \n             <div>\n                 ", "\n             </div>\n            \n            ", "\n        "])), function (e) {
+      var currentTimeTook = currentTime - this.getLastTime();
+      var timeTook = this.getLastTimeTook();
+      j(x(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral(["\n             <tick-routes @ticked=\"", "\"></tick-routes>\n            \n             <div class=\"overview-grid\">\n                 <span class=\"green\">", "</span>\n                 ", "\n                \n                <span class=\"green\">", " m</span>\n                 ", "\n                 <span class=\"green\">", "</span>\n                 <span class=\"red\">", "</span>\n                \n                 <span class=\"", "\">", "</span>\n                 <span class=\"", "\">\n                     <span>", "</span>\n                     <span class=\"", "\">(", ")</span>\n                 </span>\n             </div>\n\n             <div id=\"chart\" style=\"\"><canvas></canvas></div>\n            \n             <div>\n                 ", "\n             </div>\n            \n            ", "\n        "])), function (e) {
         return _this2.routeTicked(e.detail);
-      }, asTime(timeGone), this.started ? x(_templateObject2$1 || (_templateObject2$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", "</span>\n                 "])), asTime(this.totalTime - timeGone)) : x(_templateObject3$1 || (_templateObject3$1 = _taggedTemplateLiteral(["\n                     <div>\n                         <span class=\"red\">", "</span>\n                         <input type=\"text\" name=\"time\" value=\"", "\">\n                         <button @click=\"", "\">SET</button>\n                     </div>\n                 "])), asTime(this.totalTime - timeGone), asTime(this.totalTime), function (_) {
-        return _this2.setTotalTime();
-      }), this.meterDone, this.started ? x(_templateObject4$1 || (_templateObject4$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", " m</span>\n                 "])), this.totalMeter - this.meterDone) : x(_templateObject5$1 || (_templateObject5$1 = _taggedTemplateLiteral(["\n                     <div>\n                         <span class=\"red\">", " m</span>\n                         <input type=\"number\" name=\"meter\" value=\"", "\">\n                         <button @click=\"", "\">SET</button>\n                     </div>\n                 "])), this.totalMeter - this.meterDone, this.totalMeter, function (_) {
-        return _this2.setTotalMeter();
-      }), currentSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(currentSpeed), lastSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(lastSpeed), speedChange >= 0 ? 'green' : 'red', asSpeed(speedChange), this.tickedRoutes.map(function (route) {
+      }, asTime(timeGone), this.started ? x(_templateObject2$1 || (_templateObject2$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", "</span>\n                 "])), asTime(this.totalTime - timeGone)) : x(_templateObject3$1 || (_templateObject3$1 = _taggedTemplateLiteral(["\n                     <input type=\"text\" name=\"time\" value=\"", "\">\n                 "])), asTime(this.totalTime)), this.meterDone, this.started ? x(_templateObject4$1 || (_templateObject4$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", " m</span>\n                 "])), this.totalMeter - this.meterDone) : x(_templateObject5$1 || (_templateObject5$1 = _taggedTemplateLiteral(["\n                     <input type=\"number\" name=\"meter\" value=\"", "\">\n                 "])), this.totalMeter), asMinuteTime(currentTimeTook), asMinuteTime(timeTook), currentSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(currentSpeed), lastSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(lastSpeed), speedChange >= 0 ? 'green' : 'red', asSpeed(speedChange), this.tickedRoutes.map(function (route) {
         return x(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n                         <div class=\"route ticked\">\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "m</span>\n                         </div>\n                 "])), route.line.substring(0, 3), route['route-links'], route['vr-grade'], route.height);
       }), this.started ? x(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">reset</button>"])), function (_) {
         return _this2.reset();
@@ -15034,20 +15050,25 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "routeTicked",
     value: function routeTicked(route) {
-      this.tickedRoutes.push(route);
+      this.tickedRoutes.unshift(route);
       setItem('tickedRoutes', this.tickedRoutes);
-      var meterDone = this.meterDone + parseFloat(route.height);
-      var meterDoneAt = Math.floor(new Date().getTime() / 1000);
-      var speed = getSpeed(meterDone, meterDoneAt, this.started);
+      var lastDone = this.speedData.length > 0 ? this.speedData[this.speedData.length - 1].time : this.started;
+      var meterDone = parseFloat(route.height);
+      var meterTotal = this.meterDone + meterDone;
+      var doneAt = Math.floor(new Date().getTime() / 1000);
+      var timeTook = doneAt - lastDone;
+      var speed = getSpeed(meterDone, timeTook);
       this.speedData.push({
         meter: meterDone,
-        time: meterDoneAt,
+        meterTotal: meterTotal,
+        timeTook: timeTook,
+        time: doneAt,
         speed: speed
       });
       setItem('speedData', this.speedData);
-      this.chart.data.labels.push(asTime(meterDoneAt - this.started));
+      this.chart.data.labels.push(asTime(doneAt - this.started));
       this.chart.data.datasets[0].data.push(speed);
-      this.chart.data.datasets[1].data.push(meterDone);
+      this.chart.data.datasets[1].data.push(meterTotal);
       this.chart.update();
       this.render();
     }
@@ -15068,6 +15089,8 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "start",
     value: function start() {
+      this.totalTime = parseTime(this.querySelector('input[name=time]').value);
+      this.totalMeter = this.querySelector('input[name=meter]').value;
       this.started = Math.floor(new Date().getTime() / 1000);
       setItem('started', this.started);
       setItem('totalTime', this.totalTime);
@@ -15128,7 +15151,7 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
           }, {
             label: 'Total Meter',
             data: this.speedData.map(function (item) {
-              return item.meter;
+              return item.meterTotal;
             }),
             yAxisID: 'y1'
           }]

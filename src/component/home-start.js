@@ -1,6 +1,6 @@
 import {html, render} from "lit-html";
 import {getItem, setItem} from "../service/storage-service";
-import {asSpeed, asTime, getSpeed, parseTime} from "../service/util";
+import {asMinuteTime, asSpeed, asTime, getSpeed, parseTime} from "../service/util";
 import Chart from 'chart.js/auto';
 export class HomeStart extends HTMLElement {
 
@@ -43,11 +43,23 @@ export class HomeStart extends HTMLElement {
         return current ? current.speed: 0.0
     }
 
+    getLastTime(i= 1) {
+        const current = this.speedData.length >= i ? this.speedData[this.speedData.length-i] : null
+        return current ? current.time: (this.started || 0.0)
+    }
+    getLastTimeTook(i= 1) {
+        const current = this.speedData.length >= i ? this.speedData[this.speedData.length-i] : null
+        return current ? current.timeTook: 0.0
+    }
+
     render() {
-        const timeGone = this.started ? (Math.floor(new Date().getTime() / 1000) - this.started) : 0
+        const currentTime = Math.floor(new Date().getTime() / 1000)
+        const timeGone = this.started ? (currentTime - this.started) : 0
         const currentSpeed = this.getSpeed(1)
         const lastSpeed = this.getSpeed(2)
         const speedChange = currentSpeed - lastSpeed;
+        const currentTimeTook = currentTime - this.getLastTime()
+        const timeTook = this.getLastTimeTook()
         render(html`
              <tick-routes @ticked="${e=>this.routeTicked(e.detail)}"></tick-routes>
             
@@ -65,7 +77,9 @@ export class HomeStart extends HTMLElement {
                  ` : html`
                      <input type="number" name="meter" value="${this.totalMeter}">
                  `}
-
+                 <span class="green">${asMinuteTime(currentTimeTook)}</span>
+                 <span class="red">${asMinuteTime(timeTook)}</span>
+                
                  <span class="${currentSpeed > this.aimedSpeed ? 'green' : 'red'}">${asSpeed(currentSpeed)}</span>
                  <span class="${lastSpeed > this.aimedSpeed ? 'green' : 'red'}">
                      <span>${asSpeed(lastSpeed)}</span>
@@ -96,7 +110,7 @@ export class HomeStart extends HTMLElement {
     }
 
     routeTicked(route) {
-        this.tickedRoutes.push(route)
+        this.tickedRoutes.unshift(route)
         setItem('tickedRoutes', this.tickedRoutes)
         const lastDone = this.speedData.length > 0 ? this.speedData[this.speedData.length-1].time : this.started
         const meterDone =  parseFloat(route.height)

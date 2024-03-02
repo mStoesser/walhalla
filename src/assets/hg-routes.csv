@@ -1,507 +1,495 @@
-﻿web-scraper-order,web-scraper-start-url,route-links,route-links-href,name,c-grade,vr-grade,line,area,height,creator,createdAt,desc
-"1708444481-1","https://routen.heavensgate-muc.de/routen.html","?  KURZ","https://routen.heavensgate-muc.de/routen/route/138.html","Route: 
+﻿﻿web-scraper-order,web-scraper-start-url,route-links,route-links-href,name,c-grade,vr-grade,line,area,height,creator,createdAt,desc
+"1709364945-1","https://routen.heavensgate-muc.de/routen.html","?  KURZ","https://routen.heavensgate-muc.de/routen/route/138.html","Route: 
             ?  KURZ            				
-				(3.50)","6-","5+","010 / Indoor","Silo 3 KURZ","11 Meter","Julian","15.07.2021","KURZ"
-"1708444484-2","https://routen.heavensgate-muc.de/routen.html","Bullauge","https://routen.heavensgate-muc.de/routen/route/33.html","Route: 
-            Bullauge            				
-				(4.15)","5-","5-","607 / Indoor","Tufa Knödelsilo","18 Meter","Vassili T.","15.07.2021",""
-"1708444486-3","https://routen.heavensgate-muc.de/routen.html","Lila Lila","https://routen.heavensgate-muc.de/routen/route/32.html","Route: 
+				(3.50)","5+/6-","5+","010 / Indoor","Silo 3 KURZ","11 Meter","Julian","15.07.2021","KURZ"
+"1709364947-2","https://routen.heavensgate-muc.de/routen.html","Lila Lila","https://routen.heavensgate-muc.de/routen/route/32.html","Route: 
             Lila Lila            				
 				(4.04)","5+","6-","606 / Indoor","Tufa Knödelsilo","18 Meter","Lukas M.","15.07.2021",""
-"1708444488-4","https://routen.heavensgate-muc.de/routen.html","Christopher Werk Day","https://routen.heavensgate-muc.de/routen/route/137.html","Route: 
+"1709364949-3","https://routen.heavensgate-muc.de/routen.html","Bullauge","https://routen.heavensgate-muc.de/routen/route/33.html","Route: 
+            Bullauge            				
+				(4.15)","5-","5-","607 / Indoor","Tufa Knödelsilo","18 Meter","Vassili T.","15.07.2021",""
+"1709364952-4","https://routen.heavensgate-muc.de/routen.html","Christopher Werk Day","https://routen.heavensgate-muc.de/routen/route/137.html","Route: 
             Christopher Werk Day            				
 				(4.20)","4+","4+","918 / Indoor","Überhang rechts","15 Meter","Andi","01.12.2021",""
-"1708444491-5","https://routen.heavensgate-muc.de/routen.html","El Dülfer  KURZ","https://routen.heavensgate-muc.de/routen/route/241.html","Route: 
+"1709364954-5","https://routen.heavensgate-muc.de/routen.html","El Dülfer  KURZ","https://routen.heavensgate-muc.de/routen/route/241.html","Route: 
             El Dülfer  KURZ            				
 				(4.00)","5-","5-","009 / Indoor","Silo 3 KURZ","7 Meter","Basti","17.02.2022","KURZ"
-"1708444493-6","https://routen.heavensgate-muc.de/routen.html","Höhlenforscher KURZ","https://routen.heavensgate-muc.de/routen/route/242.html","Route: 
+"1709364956-6","https://routen.heavensgate-muc.de/routen.html","Höhlenforscher KURZ","https://routen.heavensgate-muc.de/routen/route/242.html","Route: 
             Höhlenforscher KURZ            				
-				(4.00)","5","5+","007 / Indoor","Silo 2 KURZ","7 Meter","Basti","17.02.2022","KURZ"
-"1708444495-7","https://routen.heavensgate-muc.de/routen.html","Olaf KURZ","https://routen.heavensgate-muc.de/routen/route/245.html","Route: 
+				(4.20)","5+","5+","007 / Indoor","Silo 2 KURZ","7 Meter","Basti","17.02.2022","KURZ"
+"1709364958-7","https://routen.heavensgate-muc.de/routen.html","Olaf KURZ","https://routen.heavensgate-muc.de/routen/route/245.html","Route: 
             Olaf KURZ            				
 				(4.20)","3+","4-","008 / Indoor","Silo 3 KURZ","7 Meter","Apolka","21.02.2022","KURZ"
-"1708444498-8","https://routen.heavensgate-muc.de/routen.html","Turtle Action KURZ","https://routen.heavensgate-muc.de/routen/route/275.html","Route: 
+"1709364961-8","https://routen.heavensgate-muc.de/routen.html","Turtle Action KURZ","https://routen.heavensgate-muc.de/routen/route/275.html","Route: 
             Turtle Action KURZ            				
-				(4.00)","5+","5+","006 / Indoor","Silo 2 KURZ","7 Meter","Matze","26.04.2022","KURZ"
-"1708444500-9","https://routen.heavensgate-muc.de/routen.html","Tritt ins Blaue KURZ","https://routen.heavensgate-muc.de/routen/route/324.html","Route: 
+				(4.00)","5+/6-","5+","006 / Indoor","Silo 2 KURZ","7 Meter","Matze","26.04.2022","KURZ"
+"1709364963-9","https://routen.heavensgate-muc.de/routen.html","Tritt ins Blaue KURZ","https://routen.heavensgate-muc.de/routen/route/324.html","Route: 
             Tritt ins Blaue KURZ            				
 				(4.00)","4","4","001 / Indoor","Silo 1 KURZ","7 Meter","Jürgen","19.07.2022","KURZ"
-"1708444502-10","https://routen.heavensgate-muc.de/routen.html","Gelber Mumpitz  KURZ","https://routen.heavensgate-muc.de/routen/route/325.html","Route: 
+"1709364965-10","https://routen.heavensgate-muc.de/routen.html","Gelber Mumpitz  KURZ","https://routen.heavensgate-muc.de/routen/route/325.html","Route: 
             Gelber Mumpitz  KURZ            				
 				(3.67)","4+","4+","002 / Indoor","Silo 1 KURZ","7 Meter","Jürgen","19.07.2022","KURZ"
-"1708444504-11","https://routen.heavensgate-muc.de/routen.html","Bayernkiwi","https://routen.heavensgate-muc.de/routen/route/353.html","Route: 
+"1709364967-11","https://routen.heavensgate-muc.de/routen.html","Bayernkiwi","https://routen.heavensgate-muc.de/routen/route/353.html","Route: 
             Bayernkiwi            				
 				(4.13)","5+","5+","105 / Indoor","Silo 1","30 Meter","Weiky","14.09.2022","KIDS"
-"1708444507-12","https://routen.heavensgate-muc.de/routen.html","Wenn ich schon mal  hier bin","https://routen.heavensgate-muc.de/routen/route/362.html","Route: 
+"1709364969-12","https://routen.heavensgate-muc.de/routen.html","Wenn ich schon mal  hier bin","https://routen.heavensgate-muc.de/routen/route/362.html","Route: 
             Wenn ich schon mal  hier bin            				
 				(4.11)","5","5","704 / Indoor","roter Knödelsilo","15 Meter","Felix","23.09.2022","5/5+"
-"1708444509-13","https://routen.heavensgate-muc.de/routen.html","3er Weg KURZ","https://routen.heavensgate-muc.de/routen/route/367.html","Route: 
+"1709364972-13","https://routen.heavensgate-muc.de/routen.html","3er Weg KURZ","https://routen.heavensgate-muc.de/routen/route/367.html","Route: 
             3er Weg KURZ            				
 				(4.00)","5-","5-","003 / Indoor","Silo 1 KURZ","7 Meter","Gerhard","26.09.2022","KURZ"
-"1708444511-14","https://routen.heavensgate-muc.de/routen.html","Sonniger Herbst KURZ","https://routen.heavensgate-muc.de/routen/route/368.html","Route: 
+"1709364974-14","https://routen.heavensgate-muc.de/routen.html","Sonniger Herbst KURZ","https://routen.heavensgate-muc.de/routen/route/368.html","Route: 
             Sonniger Herbst KURZ            				
 				(3.50)","4","4","004 / Indoor","Silo 2 KURZ","7 Meter","Gerhard","26.09.2022","KURZ"
-"1708444514-15","https://routen.heavensgate-muc.de/routen.html","Little blue KURZ","https://routen.heavensgate-muc.de/routen/route/372.html","Route: 
+"1709364976-15","https://routen.heavensgate-muc.de/routen.html","Little blue KURZ","https://routen.heavensgate-muc.de/routen/route/372.html","Route: 
             Little blue KURZ            				
-				(3.50)","4","4","005 / Indoor","Silo 2 KURZ","7 Meter","Julian","04.10.2022",""
-"1708444516-16","https://routen.heavensgate-muc.de/routen.html","Rote Flora","https://routen.heavensgate-muc.de/routen/route/97.html","Route: 
-            Rote Flora             				
-				(4.25)","5","5","104 / Indoor","Silo 1","30 Meter","Weiky","01.12.2022",""
-"1708444518-17","https://routen.heavensgate-muc.de/routen.html","Bavaria Blue","https://routen.heavensgate-muc.de/routen/route/45.html","Route: 
+				(3.33)","4","4","005 / Indoor","Silo 2 KURZ","7 Meter","Julian","04.10.2022",""
+"1709364978-16","https://routen.heavensgate-muc.de/routen.html","Bavaria Blue","https://routen.heavensgate-muc.de/routen/route/45.html","Route: 
             Bavaria Blue            				
 				(4.33)","5","5+","101 / Indoor","Silo 1","30 Meter","JJ","01.12.2022",""
-"1708444521-18","https://routen.heavensgate-muc.de/routen.html","Just for fun","https://routen.heavensgate-muc.de/routen/route/46.html","Route: 
+"1709364980-17","https://routen.heavensgate-muc.de/routen.html","Just for fun","https://routen.heavensgate-muc.de/routen/route/46.html","Route: 
             Just for fun             				
 				(4.57)","5-","4+","101 / Indoor","Silo 1","30 Meter","Andi","01.12.2022","Für KIDS (5-)"
-"1708444523-19","https://routen.heavensgate-muc.de/routen.html","klein aber fein","https://routen.heavensgate-muc.de/routen/route/47.html","Route: 
+"1709364983-18","https://routen.heavensgate-muc.de/routen.html","klein aber fein","https://routen.heavensgate-muc.de/routen/route/47.html","Route: 
             klein aber fein            				
 				(4.33)","5","5","102 / Indoor","Silo 1","30 Meter","Andi","01.12.2022","KIDS"
-"1708444525-20","https://routen.heavensgate-muc.de/routen.html","Spiegelei","https://routen.heavensgate-muc.de/routen/route/134.html","Route: 
+"1709364985-19","https://routen.heavensgate-muc.de/routen.html","Spiegelei","https://routen.heavensgate-muc.de/routen/route/134.html","Route: 
             Spiegelei            				
 				(3.75)","5-","5-","102 / Indoor","Silo 1","30 Meter","Clément","01.12.2022","Für Kids 5+"
-"1708444527-21","https://routen.heavensgate-muc.de/routen.html","Ladder s not letter but leiter","https://routen.heavensgate-muc.de/routen/route/136.html","Route: 
+"1709364987-20","https://routen.heavensgate-muc.de/routen.html","Rote Flora","https://routen.heavensgate-muc.de/routen/route/97.html","Route: 
+            Rote Flora             				
+				(4.25)","5","5","104 / Indoor","Silo 1","30 Meter","Weiky","01.12.2022",""
+"1709364989-21","https://routen.heavensgate-muc.de/routen.html","Ladder s not letter but leiter","https://routen.heavensgate-muc.de/routen/route/136.html","Route: 
             Ladder s not letter but leiter            				
 				(3.75)","4-","4-","918 / Indoor","Überhang rechts","15 Meter","Andi","01.12.2022",""
-"1708444530-22","https://routen.heavensgate-muc.de/routen.html","Achselhaardreads","https://routen.heavensgate-muc.de/routen/route/455.html","Route: 
+"1709364991-22","https://routen.heavensgate-muc.de/routen.html","Achselhaardreads","https://routen.heavensgate-muc.de/routen/route/455.html","Route: 
             Achselhaardreads            				
 				(4.38)","7+","7+/8-","107 / Indoor","Silo 1","30 Meter","Vinz","20.01.2023",""
-"1708444532-23","https://routen.heavensgate-muc.de/routen.html","Ponyhof","https://routen.heavensgate-muc.de/routen/route/462.html","Route: 
+"1709364994-23","https://routen.heavensgate-muc.de/routen.html","Ponyhof","https://routen.heavensgate-muc.de/routen/route/462.html","Route: 
             Ponyhof            				
 				(3.88)","5","5","203 / Indoor","Silo 2","30 Meter","Felix","03.02.2023","KIDS /KINDER  ROUTE!"
-"1708444534-24","https://routen.heavensgate-muc.de/routen.html","Knödel Alm","https://routen.heavensgate-muc.de/routen/route/463.html","Route: 
+"1709364996-24","https://routen.heavensgate-muc.de/routen.html","Knödel Alm","https://routen.heavensgate-muc.de/routen/route/463.html","Route: 
             Knödel Alm            				
 				(4.00)","5-","5-","918 / Indoor","Überhang rechts","15 Meter","Felix","07.02.2023","KIDS /KINDER ROUTE"
-"1708444536-25","https://routen.heavensgate-muc.de/routen.html","Das einzige, was du haben kannst..","https://routen.heavensgate-muc.de/routen/route/465.html","Route: 
-            Das einzige, was du haben kannst..            				
-				(4.33)","6-","5+","204 / Indoor","Silo 2","30 Meter","Ruben","10.02.2023","..is n paar aufs Maul"
-"1708444539-26","https://routen.heavensgate-muc.de/routen.html","Morningsun","https://routen.heavensgate-muc.de/routen/route/470.html","Route: 
+"1709364998-25","https://routen.heavensgate-muc.de/routen.html","Morningsun","https://routen.heavensgate-muc.de/routen/route/470.html","Route: 
             Morningsun            				
 				(4.22)","5","5+","D03 / Outdoor","Schlafzimmer","18 Meter","JJ","16.02.2023",""
-"1708444541-27","https://routen.heavensgate-muc.de/routen.html","Yoga Amsel","https://routen.heavensgate-muc.de/routen/route/477.html","Route: 
-            Yoga Amsel            				
-				(3.50)","5-","5-","D05 / Outdoor","Schlafzimmer","18 Meter","Felix","03.03.2023",""
-"1708444543-28","https://routen.heavensgate-muc.de/routen.html","imPULSIV","https://routen.heavensgate-muc.de/routen/route/478.html","Route: 
+"1709365000-26","https://routen.heavensgate-muc.de/routen.html","imPULSIV","https://routen.heavensgate-muc.de/routen/route/478.html","Route: 
             imPULSIV             				
 				(4.81)","7-","7-","D03 / Outdoor","Schlafzimmer","18 Meter","Andi","03.03.2023",""
-"1708444545-29","https://routen.heavensgate-muc.de/routen.html","Sanda-project original","https://routen.heavensgate-muc.de/routen/route/480.html","Route: 
-            Sanda-project original             				
-				(4.38)","7-/7","7-/7","D04 / Outdoor","Schlafzimmer","18 Meter","Celina","07.03.2023",""
-"1708444548-30","https://routen.heavensgate-muc.de/routen.html","figure 4 setting","https://routen.heavensgate-muc.de/routen/route/481.html","Route: 
-            figure 4 setting             				
-				(4.00)","5+","5+","D04 / Outdoor","Schlafzimmer","18 Meter","Celina","07.03.2023",""
-"1708444550-31","https://routen.heavensgate-muc.de/routen.html","Die Legende des Schraubergottes","https://routen.heavensgate-muc.de/routen/route/482.html","Route: 
-            Die Legende des Schraubergottes            				
-				(4.13)","6-","6-","D05 / Outdoor","Schlafzimmer","18 Meter","Celina","07.03.2023","SCHRAUBERGOTTES"
-"1708444552-32","https://routen.heavensgate-muc.de/routen.html","Mein roter Faden sind... die blauen Unterhosen","https://routen.heavensgate-muc.de/routen/route/483.html","Route: 
+"1709365002-27","https://routen.heavensgate-muc.de/routen.html","Mein roter Faden sind... die blauen Unterhosen","https://routen.heavensgate-muc.de/routen/route/483.html","Route: 
             Mein roter Faden sind... die blauen Unterhosen             				
 				(4.71)","8","8-/8","D03 / Outdoor","Schlafzimmer","18 Meter","Andi","07.03.2023","die blauen Unterhosen"
-"1708444554-33","https://routen.heavensgate-muc.de/routen.html","Wenn du an mein Maul gehst, dann hau ich dir aufs Bier","https://routen.heavensgate-muc.de/routen/route/484.html","Route: 
+"1709365005-28","https://routen.heavensgate-muc.de/routen.html","Wenn du an mein Maul gehst, dann hau ich dir aufs Bier","https://routen.heavensgate-muc.de/routen/route/484.html","Route: 
             Wenn du an mein Maul gehst, dann hau ich dir aufs Bier            				
 				(4.00)","8-","8-","404 / Indoor","Silo 4","30 Meter","Ruben","09.03.2023","aufs Bier"
-"1708444557-34","https://routen.heavensgate-muc.de/routen.html","Nejibana","https://routen.heavensgate-muc.de/routen/route/492.html","Route: 
+"1709365007-29","https://routen.heavensgate-muc.de/routen.html","Nejibana","https://routen.heavensgate-muc.de/routen/route/492.html","Route: 
             Nejibana            				
 				(4.00)","7+","7+","409 / Indoor","Silo 4","30 Meter","JJ","16.03.2023","OHNE VERSCHNEIDUNG! Verschärft am 24.03.23"
-"1708444559-35","https://routen.heavensgate-muc.de/routen.html","Sherpabrückling","https://routen.heavensgate-muc.de/routen/route/493.html","Route: 
-            Sherpabrückling            				
-				(4.22)","5-","5-","D07 / Outdoor","Schlafzimmer","18 Meter","Andi","20.03.2023",""
-"1708444561-36","https://routen.heavensgate-muc.de/routen.html","Spinat im spagat","https://routen.heavensgate-muc.de/routen/route/494.html","Route: 
-            Spinat im spagat            				
-				(3.80)","7-/7","7-/7","D06 / Outdoor","Schlafzimmer","18 Meter","Celina","21.03.2023",""
-"1708444564-37","https://routen.heavensgate-muc.de/routen.html","Milkamoving","https://routen.heavensgate-muc.de/routen/route/495.html","Route: 
-            Milkamoving            				
-				(4.25)","5+","5+","D06 / Outdoor","Schlafzimmer","18 Meter","Celina","21.03.2023",""
-"1708444566-38","https://routen.heavensgate-muc.de/routen.html","Knie Bar","https://routen.heavensgate-muc.de/routen/route/496.html","Route: 
-            Knie Bar            				
-				(4.80)","8-","8-/8","D07 / Outdoor","Schlafzimmer","18 Meter","Celina","21.03.2023",""
-"1708444568-39","https://routen.heavensgate-muc.de/routen.html","Sonnenschluck äh -schlag","https://routen.heavensgate-muc.de/routen/route/497.html","Route: 
-            Sonnenschluck äh -schlag            				
-				(4.64)","6","6","D06 / Outdoor","Schlafzimmer","18 Meter","Celina","22.03.2023",""
-"1708444570-40","https://routen.heavensgate-muc.de/routen.html","Amor  con  el canto","https://routen.heavensgate-muc.de/routen/route/498.html","Route: 
-            Amor  con  el canto            				
-				(4.64)","7-/7","7-/7","D07 / Outdoor","Schlafzimmer","18 Meter","Celina","22.03.2023","Ach ja  Vinz,.. Kante nicht vergessen :)"
-"1708444573-41","https://routen.heavensgate-muc.de/routen.html","Late night issues","https://routen.heavensgate-muc.de/routen/route/503.html","Route: 
-            Late night issues            				
-				(3.86)","7","7/7+","D05 / Outdoor","Schlafzimmer","18 Meter","Celina","04.04.2023",""
-"1708444575-42","https://routen.heavensgate-muc.de/routen.html","Fujikujaku","https://routen.heavensgate-muc.de/routen/route/507.html","Route: 
-            Fujikujaku            				
-				(4.00)","6","6","D04 / Outdoor","Schlafzimmer","18 Meter","JJ","06.04.2023",""
-"1708444577-43","https://routen.heavensgate-muc.de/routen.html","Icke und die Tritte","https://routen.heavensgate-muc.de/routen/route/510.html","Route: 
+"1709365009-30","https://routen.heavensgate-muc.de/routen.html","Icke und die Tritte","https://routen.heavensgate-muc.de/routen/route/510.html","Route: 
             Icke und die Tritte            				
 				(4.67)","5-","5-","606 / Indoor","Tufa Knödelsilo","18 Meter","Andi","25.04.2023","KURZ"
-"1708444579-44","https://routen.heavensgate-muc.de/routen.html","Mathelehrer inklusive KURZ","https://routen.heavensgate-muc.de/routen/route/511.html","Route: 
+"1709365011-31","https://routen.heavensgate-muc.de/routen.html","Mathelehrer inklusive KURZ","https://routen.heavensgate-muc.de/routen/route/511.html","Route: 
             Mathelehrer inklusive KURZ            				
 				(4.50)","4","4","608 / Indoor","Tufa Knödelsilo","18 Meter","Andi","25.04.2023","KURZ"
-"1708444582-45","https://routen.heavensgate-muc.de/routen.html","papperlapapp","https://routen.heavensgate-muc.de/routen/route/512.html","Route: 
+"1709365013-32","https://routen.heavensgate-muc.de/routen.html","papperlapapp","https://routen.heavensgate-muc.de/routen/route/512.html","Route: 
             papperlapapp            				
 				(4.25)","5-","5-","803 / Indoor","Trichter Knödelsilo","18 Meter","Timon","25.04.2023","KURZ"
-"1708444584-46","https://routen.heavensgate-muc.de/routen.html","Gelber pinguin","https://routen.heavensgate-muc.de/routen/route/513.html","Route: 
+"1709365015-33","https://routen.heavensgate-muc.de/routen.html","Gelber pinguin","https://routen.heavensgate-muc.de/routen/route/513.html","Route: 
             Gelber pinguin            				
 				(4.67)","5","5","805 / Indoor","Trichter Knödelsilo","18 Meter","Frank","25.04.2023","KURZ"
-"1708444586-47","https://routen.heavensgate-muc.de/routen.html","Weideglück","https://routen.heavensgate-muc.de/routen/route/514.html","Route: 
+"1709365018-34","https://routen.heavensgate-muc.de/routen.html","Weideglück","https://routen.heavensgate-muc.de/routen/route/514.html","Route: 
             Weideglück             				
 				(4.00)","5-","5-","806 / Indoor","Trichter Knödelsilo","18 Meter","Claudia","25.04.2023","KURZ"
-"1708444588-48","https://routen.heavensgate-muc.de/routen.html","Löwenzahn","https://routen.heavensgate-muc.de/routen/route/515.html","Route: 
+"1709365020-35","https://routen.heavensgate-muc.de/routen.html","Löwenzahn","https://routen.heavensgate-muc.de/routen/route/515.html","Route: 
             Löwenzahn            				
 				(4.50)","5","5","607 / Indoor","Tufa Knödelsilo","18 Meter","Claudia","26.04.2023","KURZ"
-"1708444591-49","https://routen.heavensgate-muc.de/routen.html","Weißer Pinguin","https://routen.heavensgate-muc.de/routen/route/516.html","Route: 
+"1709365022-36","https://routen.heavensgate-muc.de/routen.html","Weißer Pinguin","https://routen.heavensgate-muc.de/routen/route/516.html","Route: 
             Weißer Pinguin             				
 				(5.00)","4+","4+","802 / Indoor","Trichter Knödelsilo","18 Meter","Frank","26.04.2023","KURZ"
-"1708444593-50","https://routen.heavensgate-muc.de/routen.html","Frühschicht","https://routen.heavensgate-muc.de/routen/route/526.html","Route: 
+"1709365024-37","https://routen.heavensgate-muc.de/routen.html","Frühschicht","https://routen.heavensgate-muc.de/routen/route/526.html","Route: 
             Frühschicht            				
-				(4.40)","5+","5+","208 / Indoor","Silo 2","30 Meter","Felix","05.05.2023",""
-"1708444595-51","https://routen.heavensgate-muc.de/routen.html","Rocket Raccoon","https://routen.heavensgate-muc.de/routen/route/535.html","Route: 
+				(4.50)","5+","5+","208 / Indoor","Silo 2","30 Meter","Felix","05.05.2023",""
+"1709365026-38","https://routen.heavensgate-muc.de/routen.html","Rocket Raccoon","https://routen.heavensgate-muc.de/routen/route/535.html","Route: 
             Rocket Raccoon            				
-				(4.00)","7/7+","7","308 / Indoor","Silo 3","30 Meter","JJ","19.05.2023","Weite Züge an guten Griffen"
-"1708444597-52","https://routen.heavensgate-muc.de/routen.html","Östrogenia","https://routen.heavensgate-muc.de/routen/route/541.html","Route: 
+				(4.14)","7/7+","7","308 / Indoor","Silo 3","30 Meter","JJ","19.05.2023","Weite Züge an guten Griffen"
+"1709365029-39","https://routen.heavensgate-muc.de/routen.html","Östrogenia","https://routen.heavensgate-muc.de/routen/route/541.html","Route: 
             Östrogenia            				
 				(4.57)","7-/7","7-/7","410 / Indoor","Silo 4","30 Meter","Anton","26.05.2023",""
-"1708444599-53","https://routen.heavensgate-muc.de/routen.html","Zangetsu","https://routen.heavensgate-muc.de/routen/route/542.html","Route: 
+"1709365031-40","https://routen.heavensgate-muc.de/routen.html","Zangetsu","https://routen.heavensgate-muc.de/routen/route/542.html","Route: 
             Zangetsu            				
-				(3.83)","7+","7+","D02  / Outdoor","Hostel","18 Meter","JJ","31.05.2023","Kleiner Überraschungsnewschoolmove 
+				(4.00)","7+","7+","D02  / Outdoor","Hostel","18 Meter","JJ","31.05.2023","Kleiner Überraschungsnewschoolmove 
 ganz zum  Schluss !"
-"1708444602-54","https://routen.heavensgate-muc.de/routen.html","Zabimaru","https://routen.heavensgate-muc.de/routen/route/543.html","Route: 
+"1709365033-41","https://routen.heavensgate-muc.de/routen.html","Zabimaru","https://routen.heavensgate-muc.de/routen/route/543.html","Route: 
             Zabimaru            				
 				(4.00)","6+/7-","6+/7-","D01 / Outdoor","Hostel","18 Meter","JJ","31.05.2023",""
-"1708444604-55","https://routen.heavensgate-muc.de/routen.html","Hüftschwung im Schlagergarten","https://routen.heavensgate-muc.de/routen/route/544.html","Route: 
+"1709365035-42","https://routen.heavensgate-muc.de/routen.html","Hüftschwung im Schlagergarten","https://routen.heavensgate-muc.de/routen/route/544.html","Route: 
             Hüftschwung im Schlagergarten             				
 				(4.00)","9-","9-","D01 / Outdoor","Hostel","18 Meter","Julius","02.06.2023",""
-"1708444606-56","https://routen.heavensgate-muc.de/routen.html","Sorgenkind","https://routen.heavensgate-muc.de/routen/route/545.html","Route: 
+"1709365037-43","https://routen.heavensgate-muc.de/routen.html","Sorgenkind","https://routen.heavensgate-muc.de/routen/route/545.html","Route: 
             Sorgenkind             				
 				(4.00)","8-","8-/8","D02  / Outdoor","Hostel","18 Meter","Julius","02.06.2023",""
-"1708444608-57","https://routen.heavensgate-muc.de/routen.html","Ohne Fleiß kein Fleisch","https://routen.heavensgate-muc.de/routen/route/546.html","Route: 
+"1709365039-44","https://routen.heavensgate-muc.de/routen.html","Ohne Fleiß kein Fleisch","https://routen.heavensgate-muc.de/routen/route/546.html","Route: 
             Ohne Fleiß kein Fleisch             				
-				(4.17)","7","7","D01 / Outdoor","Hostel","18 Meter","Julius","02.06.2023",""
-"1708444611-58","https://routen.heavensgate-muc.de/routen.html","Benihime","https://routen.heavensgate-muc.de/routen/route/547.html","Route: 
+				(4.29)","7","7","D01 / Outdoor","Hostel","18 Meter","Julius","02.06.2023",""
+"1709365042-45","https://routen.heavensgate-muc.de/routen.html","Benihime","https://routen.heavensgate-muc.de/routen/route/547.html","Route: 
             Benihime            				
 				(4.25)","6","6","D02  / Outdoor","Hostel","18 Meter","JJ","02.06.2023",""
-"1708444613-59","https://routen.heavensgate-muc.de/routen.html","Imteam intim","https://routen.heavensgate-muc.de/routen/route/549.html","Route: 
+"1709365044-46","https://routen.heavensgate-muc.de/routen.html","Imteam intim","https://routen.heavensgate-muc.de/routen/route/549.html","Route: 
             Imteam intim             				
-				(4.29)","6-","6-","D01 / Outdoor","Hostel","18 Meter","Andi","12.06.2023","5+/6-"
-"1708444615-60","https://routen.heavensgate-muc.de/routen.html","Tarmac Beach","https://routen.heavensgate-muc.de/routen/route/550.html","Route: 
+				(4.29)","6-","5+/6-","D01 / Outdoor","Hostel","18 Meter","Andi","12.06.2023",""
+"1709365046-47","https://routen.heavensgate-muc.de/routen.html","Tarmac Beach","https://routen.heavensgate-muc.de/routen/route/550.html","Route: 
             Tarmac Beach             				
 				(4.25)","5","5","D02  / Outdoor","Hostel","18 Meter","Andi","19.06.2023","5-/5"
-"1708444617-61","https://routen.heavensgate-muc.de/routen.html","Ziag nüber, ziag nauf","https://routen.heavensgate-muc.de/routen/route/564.html","Route: 
+"1709365048-48","https://routen.heavensgate-muc.de/routen.html","Ziag nüber, ziag nauf","https://routen.heavensgate-muc.de/routen/route/564.html","Route: 
             Ziag nüber, ziag nauf             				
-				(3.40)","5+","5+","D08 / Outdoor","Aussicht","18 Meter","KletterPuls","10.07.2023","5+/6-"
-"1708444619-62","https://routen.heavensgate-muc.de/routen.html","Quetsch weg bis der Saft läuft","https://routen.heavensgate-muc.de/routen/route/565.html","Route: 
+				(3.40)","5+/6-","5+","D08 / Outdoor","Aussicht","18 Meter","KletterPuls","10.07.2023","5+/6-"
+"1709365051-49","https://routen.heavensgate-muc.de/routen.html","Quetsch weg bis der Saft läuft","https://routen.heavensgate-muc.de/routen/route/565.html","Route: 
             Quetsch weg bis der Saft läuft             				
-				(3.58)","6/6+","6/6+","D09 / Outdoor","Aussicht","18 Meter","KletterPuls","10.07.2023",""
-"1708444622-63","https://routen.heavensgate-muc.de/routen.html","Tripper in der S-Bahn","https://routen.heavensgate-muc.de/routen/route/567.html","Route: 
+				(3.58)","6+","6/6+","D09 / Outdoor","Aussicht","18 Meter","KletterPuls","10.07.2023",""
+"1709365053-50","https://routen.heavensgate-muc.de/routen.html","Tripper in der S-Bahn","https://routen.heavensgate-muc.de/routen/route/567.html","Route: 
             Tripper in der S-Bahn            				
-				(4.43)","7-","6+/7-","D08 / Outdoor","Aussicht","18 Meter","Felix","12.07.2023",""
-"1708444624-64","https://routen.heavensgate-muc.de/routen.html","Twister-Sister","https://routen.heavensgate-muc.de/routen/route/568.html","Route: 
+				(4.25)","7-","6+/7-","D08 / Outdoor","Aussicht","18 Meter","Felix","12.07.2023",""
+"1709365055-51","https://routen.heavensgate-muc.de/routen.html","Twister-Sister","https://routen.heavensgate-muc.de/routen/route/568.html","Route: 
             Twister-Sister            				
 				(4.57)","7+/8-","7+/8-","D09 / Outdoor","Aussicht","18 Meter","Felix","12.07.2023",""
-"1708444626-65","https://routen.heavensgate-muc.de/routen.html","Meier wie die Eier","https://routen.heavensgate-muc.de/routen/route/569.html","Route: 
+"1709365058-52","https://routen.heavensgate-muc.de/routen.html","Meier wie die Eier","https://routen.heavensgate-muc.de/routen/route/569.html","Route: 
             Meier wie die Eier             				
-				(4.60)","6+/7-","6+","405 / Indoor","Silo 4","30 Meter","Hedi","13.07.2023",""
-"1708444628-66","https://routen.heavensgate-muc.de/routen.html","Bumblebee value","https://routen.heavensgate-muc.de/routen/route/570.html","Route: 
+				(4.55)","6+/7-","6+","405 / Indoor","Silo 4","30 Meter","Hedi","13.07.2023",""
+"1709365060-53","https://routen.heavensgate-muc.de/routen.html","Bumblebee value","https://routen.heavensgate-muc.de/routen/route/570.html","Route: 
             Bumblebee value            				
 				(5.00)","8","8","916 / Indoor","Überhang rechts","15 Meter","Andi","13.07.2023",""
-"1708444631-67","https://routen.heavensgate-muc.de/routen.html","Easy Raider","https://routen.heavensgate-muc.de/routen/route/578.html","Route: 
-            Easy Raider             				
-				(4.05)","6/6+","6/6+","909 / Indoor","Überhang links","15 Meter","Felix","14.08.2023",""
-"1708444633-68","https://routen.heavensgate-muc.de/routen.html","Heißt jetzt twix","https://routen.heavensgate-muc.de/routen/route/579.html","Route: 
-            Heißt jetzt twix            				
-				(4.45)","8-","8-","909 / Indoor","Überhang links","15 Meter","Felix","14.08.2023",""
-"1708444635-69","https://routen.heavensgate-muc.de/routen.html","Poke the monkey","https://routen.heavensgate-muc.de/routen/route/582.html","Route: 
+"1709365062-54","https://routen.heavensgate-muc.de/routen.html","Poke the monkey","https://routen.heavensgate-muc.de/routen/route/582.html","Route: 
             Poke the monkey            				
-				(4.00)","8","8/8+","D09 / Outdoor","Aussicht","18 Meter","Julius","25.08.2023","9 exe für  kleinere Menschen  schwer zu Clippen !"
-"1708444637-70","https://routen.heavensgate-muc.de/routen.html","Anton Sicherheld","https://routen.heavensgate-muc.de/routen/route/584.html","Route: 
+				(4.00)","8/8+","8/8+","D09 / Outdoor","Aussicht","18 Meter","Julius","25.08.2023","9 exe für  kleinere Menschen  schwer zu Clippen !"
+"1709365064-55","https://routen.heavensgate-muc.de/routen.html","Anton Sicherheld","https://routen.heavensgate-muc.de/routen/route/584.html","Route: 
             Anton Sicherheld             				
-				(4.50)","8-/8","8","D08 / Outdoor","Aussicht","18 Meter","Julius","25.08.2023",""
-"1708444640-71","https://routen.heavensgate-muc.de/routen.html","Hopfen und Malz,","https://routen.heavensgate-muc.de/routen/route/585.html","Route: 
+				(4.29)","8-/8","8","D08 / Outdoor","Aussicht","18 Meter","Julius","25.08.2023",""
+"1709365066-56","https://routen.heavensgate-muc.de/routen.html","Hopfen und Malz,","https://routen.heavensgate-muc.de/routen/route/585.html","Route: 
             Hopfen und Malz,             				
-				(4.00)","5+","5","902 / Indoor","Platte links","15 Meter","JJ","31.08.2023","Gott Erhalts"
-"1708444642-72","https://routen.heavensgate-muc.de/routen.html","Ein Radler ist kein Bier","https://routen.heavensgate-muc.de/routen/route/586.html","Route: 
+				(3.88)","5+","5","902 / Indoor","Platte links","15 Meter","JJ","31.08.2023","Gott Erhalts"
+"1709365069-57","https://routen.heavensgate-muc.de/routen.html","Ein Radler ist kein Bier","https://routen.heavensgate-muc.de/routen/route/586.html","Route: 
             Ein Radler ist kein Bier             				
 				(4.92)","7+","7+","902 / Indoor","Platte links","15 Meter","JJ","31.08.2023",""
-"1708444644-73","https://routen.heavensgate-muc.de/routen.html","Maultäschle","https://routen.heavensgate-muc.de/routen/route/589.html","Route: 
+"1709365071-58","https://routen.heavensgate-muc.de/routen.html","Maultäschle","https://routen.heavensgate-muc.de/routen/route/589.html","Route: 
             Maultäschle            				
 				(4.50)","9-/9","9-/9","D08 / Outdoor","Aussicht","18 Meter","Ruben","11.09.2023",""
-"1708444646-74","https://routen.heavensgate-muc.de/routen.html","Maulesel","https://routen.heavensgate-muc.de/routen/route/590.html","Route: 
+"1709365073-59","https://routen.heavensgate-muc.de/routen.html","Maulesel","https://routen.heavensgate-muc.de/routen/route/590.html","Route: 
             Maulesel            				
 				(5.00)","9-/9","9-/9","D09 / Outdoor","Aussicht","18 Meter","Ruben","11.09.2023","ERSTE EXE VORCLIPPEN!!"
-"1708444649-75","https://routen.heavensgate-muc.de/routen.html","Purple Rain","https://routen.heavensgate-muc.de/routen/route/591.html","Route: 
+"1709365076-60","https://routen.heavensgate-muc.de/routen.html","Purple Rain","https://routen.heavensgate-muc.de/routen/route/591.html","Route: 
             Purple Rain            				
 				(4.50)","8-","7+/8-","304 / Indoor","Silo 3","30 Meter","JJ","13.09.2023",""
-"1708444651-76","https://routen.heavensgate-muc.de/routen.html","Vegan schützt","https://routen.heavensgate-muc.de/routen/route/592.html","Route: 
+"1709365078-61","https://routen.heavensgate-muc.de/routen.html","Vegan schützt","https://routen.heavensgate-muc.de/routen/route/592.html","Route: 
             Vegan schützt            				
 				(4.22)","5","5","915 / Indoor","Überhang rechts","15 Meter","Felix","15.09.2023",""
-"1708444653-77","https://routen.heavensgate-muc.de/routen.html","Fleisch ist Fleisch","https://routen.heavensgate-muc.de/routen/route/593.html","Route: 
+"1709365080-62","https://routen.heavensgate-muc.de/routen.html","Fleisch ist Fleisch","https://routen.heavensgate-muc.de/routen/route/593.html","Route: 
             Fleisch ist Fleisch             				
 				(3.92)","6+/7-","6+/7-","915 / Indoor","Überhang rechts","15 Meter","Felix","15.09.2023",""
-"1708444655-78","https://routen.heavensgate-muc.de/routen.html","Vitalis","https://routen.heavensgate-muc.de/routen/route/594.html","Route: 
+"1709365082-63","https://routen.heavensgate-muc.de/routen.html","Vitalis","https://routen.heavensgate-muc.de/routen/route/594.html","Route: 
             Vitalis            				
-				(3.43)","6/6+","6/6+","701 / Indoor","roter Knödelsilo","15 Meter","Felix","20.09.2023",""
-"1708444657-79","https://routen.heavensgate-muc.de/routen.html","Schmerzcreme","https://routen.heavensgate-muc.de/routen/route/595.html","Route: 
+				(3.50)","6/6+","6/6+","701 / Indoor","roter Knödelsilo","15 Meter","Felix","20.09.2023",""
+"1709365085-64","https://routen.heavensgate-muc.de/routen.html","Schmerzcreme","https://routen.heavensgate-muc.de/routen/route/595.html","Route: 
             Schmerzcreme            				
-				(4.50)","7/7+","7/7+","701 / Indoor","roter Knödelsilo","15 Meter","Felix","20.09.2023",""
-"1708444660-80","https://routen.heavensgate-muc.de/routen.html","Treinta Fleurs","https://routen.heavensgate-muc.de/routen/route/596.html","Route: 
+				(4.43)","7/7+","7/7+","701 / Indoor","roter Knödelsilo","15 Meter","Felix","20.09.2023",""
+"1709365087-65","https://routen.heavensgate-muc.de/routen.html","Treinta Fleurs","https://routen.heavensgate-muc.de/routen/route/596.html","Route: 
             Treinta Fleurs            				
-				(4.50)","7-/7","7-","604 / Indoor","Tufa Knödelsilo","18 Meter","Celina","26.09.2023","OHNE BETON!"
-"1708444662-81","https://routen.heavensgate-muc.de/routen.html","Buster Call","https://routen.heavensgate-muc.de/routen/route/597.html","Route: 
+				(4.46)","7-/7","7-","604 / Indoor","Tufa Knödelsilo","18 Meter","Celina","26.09.2023","OHNE BETON!"
+"1709365089-66","https://routen.heavensgate-muc.de/routen.html","Buster Call","https://routen.heavensgate-muc.de/routen/route/597.html","Route: 
             Buster Call             				
 				(4.75)","8/8+","8/8+","604 / Indoor","Tufa Knödelsilo","18 Meter","Celina","26.09.2023","OHNE BETON!"
-"1708444664-82","https://routen.heavensgate-muc.de/routen.html","Teleschneckenverschneidung","https://routen.heavensgate-muc.de/routen/route/598.html","Route: 
+"1709365091-67","https://routen.heavensgate-muc.de/routen.html","Teleschneckenverschneidung","https://routen.heavensgate-muc.de/routen/route/598.html","Route: 
             Teleschneckenverschneidung            				
-				(4.30)","6-","6-","605 / Indoor","Tufa Knödelsilo","15 Meter","Celina","26.09.2023",""
-"1708444666-83","https://routen.heavensgate-muc.de/routen.html","Iprasa","https://routen.heavensgate-muc.de/routen/route/599.html","Route: 
+				(4.42)","6-","6-","605 / Indoor","Tufa Knödelsilo","15 Meter","Celina","26.09.2023",""
+"1709365094-68","https://routen.heavensgate-muc.de/routen.html","Iprasa","https://routen.heavensgate-muc.de/routen/route/599.html","Route: 
             Iprasa            				
-				(4.27)","6+","6/6+","806 / Indoor","Trichter Knödelsilo","18 Meter","JJ","27.09.2023",""
-"1708444668-84","https://routen.heavensgate-muc.de/routen.html","Naat","https://routen.heavensgate-muc.de/routen/route/600.html","Route: 
+				(4.33)","6+","6/6+","806 / Indoor","Trichter Knödelsilo","18 Meter","JJ","27.09.2023",""
+"1709365096-69","https://routen.heavensgate-muc.de/routen.html","Naat","https://routen.heavensgate-muc.de/routen/route/600.html","Route: 
             Naat            				
 				(4.13)","7-/7","7-/7","806 / Indoor","Trichter Knödelsilo","18 Meter","JJ","27.09.2023",""
-"1708444671-85","https://routen.heavensgate-muc.de/routen.html","Beton, Steine, Scherben","https://routen.heavensgate-muc.de/routen/route/601.html","Route: 
+"1709365098-70","https://routen.heavensgate-muc.de/routen.html","Beton, Steine, Scherben","https://routen.heavensgate-muc.de/routen/route/601.html","Route: 
             Beton, Steine, Scherben            				
-				(4.13)","5+","5+","601 / Indoor","Tufa Knödelsilo","18 Meter","KletterPuls","02.10.2023",""
-"1708444673-86","https://routen.heavensgate-muc.de/routen.html","Kugeln,Stützen,Purzelbaumen","https://routen.heavensgate-muc.de/routen/route/602.html","Route: 
+				(4.11)","5+","5+","601 / Indoor","Tufa Knödelsilo","18 Meter","KletterPuls","02.10.2023",""
+"1709365100-71","https://routen.heavensgate-muc.de/routen.html","Kugeln,Stützen,Purzelbaumen","https://routen.heavensgate-muc.de/routen/route/602.html","Route: 
             Kugeln,Stützen,Purzelbaumen            				
 				(3.80)","6+/7-","6+/7-","601 / Indoor","Tufa Knödelsilo","18 Meter","KletterPuls","02.10.2023",""
-"1708444675-87","https://routen.heavensgate-muc.de/routen.html","Genusswelten","https://routen.heavensgate-muc.de/routen/route/603.html","Route: 
+"1709365102-72","https://routen.heavensgate-muc.de/routen.html","Genusswelten","https://routen.heavensgate-muc.de/routen/route/603.html","Route: 
             Genusswelten            				
-				(4.30)","6+","6+","407 / Indoor","Silo 4","30 Meter","Felix","05.10.2023",""
-"1708444678-88","https://routen.heavensgate-muc.de/routen.html","Die Trägheit der Banane","https://routen.heavensgate-muc.de/routen/route/604.html","Route: 
+				(4.36)","6+","6+","407 / Indoor","Silo 4","30 Meter","Felix","05.10.2023",""
+"1709365105-73","https://routen.heavensgate-muc.de/routen.html","Die Trägheit der Banane","https://routen.heavensgate-muc.de/routen/route/604.html","Route: 
             Die Trägheit der Banane             				
-				(4.38)","7-","7-","602 / Indoor","Tufa Knödelsilo","15 Meter","Hedi","10.10.2023","OHNE BETON"
-"1708444680-89","https://routen.heavensgate-muc.de/routen.html","Glücksmomente","https://routen.heavensgate-muc.de/routen/route/605.html","Route: 
+				(4.41)","7-","7-","602 / Indoor","Tufa Knödelsilo","15 Meter","Hedi","10.10.2023","OHNE BETON"
+"1709365107-74","https://routen.heavensgate-muc.de/routen.html","Glücksmomente","https://routen.heavensgate-muc.de/routen/route/605.html","Route: 
             Glücksmomente            				
 				(3.70)","5+","5+","916 / Indoor","Überhang rechts","15 Meter","Felix","12.10.2023",""
-"1708444682-90","https://routen.heavensgate-muc.de/routen.html","Endzone Endgegner","https://routen.heavensgate-muc.de/routen/route/606.html","Route: 
+"1709365109-75","https://routen.heavensgate-muc.de/routen.html","Endzone Endgegner","https://routen.heavensgate-muc.de/routen/route/606.html","Route: 
             Endzone Endgegner            				
 				(4.22)","6+","6+","916 / Indoor","Überhang rechts","15 Meter","Felix","12.10.2023",""
-"1708444684-91","https://routen.heavensgate-muc.de/routen.html","Attaque de câlins","https://routen.heavensgate-muc.de/routen/route/607.html","Route: 
+"1709365111-76","https://routen.heavensgate-muc.de/routen.html","Attaque de câlins","https://routen.heavensgate-muc.de/routen/route/607.html","Route: 
             Attaque de câlins            				
 				(4.23)","7+","7+","916 / Indoor","Überhang rechts","15 Meter","Felix","12.10.2023",""
-"1708444687-92","https://routen.heavensgate-muc.de/routen.html","Falschrausschrauberbazi","https://routen.heavensgate-muc.de/routen/route/608.html","Route: 
+"1709365114-77","https://routen.heavensgate-muc.de/routen.html","Falschrausschrauberbazi","https://routen.heavensgate-muc.de/routen/route/608.html","Route: 
             Falschrausschrauberbazi            				
-				(4.17)","6+/7-","6+","301 / Indoor","Silo 3","30 Meter","KletterPuls","16.10.2023",""
-"1708444689-93","https://routen.heavensgate-muc.de/routen.html","Musa Musa","https://routen.heavensgate-muc.de/routen/route/609.html","Route: 
+				(4.29)","6+/7-","6+","301 / Indoor","Silo 3","30 Meter","KletterPuls","16.10.2023",""
+"1709365116-78","https://routen.heavensgate-muc.de/routen.html","Musa Musa","https://routen.heavensgate-muc.de/routen/route/609.html","Route: 
             Musa Musa            				
 				(4.25)","6+","6+","905 / Indoor","Platte rechts","15 Meter","Julian","26.10.2023",""
-"1708444691-94","https://routen.heavensgate-muc.de/routen.html","Algentem facile","https://routen.heavensgate-muc.de/routen/route/611.html","Route: 
+"1709365118-79","https://routen.heavensgate-muc.de/routen.html","Algentem facile","https://routen.heavensgate-muc.de/routen/route/611.html","Route: 
             Algentem facile            				
 				(4.10)","5+","5+","905 / Indoor","Platte rechts","15 Meter","Julian","26.10.2023",""
-"1708444694-95","https://routen.heavensgate-muc.de/routen.html","David B. im Höllental","https://routen.heavensgate-muc.de/routen/route/612.html","Route: 
+"1709365120-80","https://routen.heavensgate-muc.de/routen.html","David B. im Höllental","https://routen.heavensgate-muc.de/routen/route/612.html","Route: 
             David B. im Höllental            				
-				(4.09)","6+/7-","6+/7-","801 / Indoor","Trichter Knödelsilo","18 Meter","Felix","27.10.2023",""
-"1708444696-96","https://routen.heavensgate-muc.de/routen.html","1 Millionen Subs","https://routen.heavensgate-muc.de/routen/route/613.html","Route: 
+				(4.23)","6+/7-","6+/7-","801 / Indoor","Trichter Knödelsilo","18 Meter","Felix","27.10.2023",""
+"1709365123-81","https://routen.heavensgate-muc.de/routen.html","1 Millionen Subs","https://routen.heavensgate-muc.de/routen/route/613.html","Route: 
             1 Millionen Subs            				
-				(3.89)","5+","5+","801 / Indoor","Trichter Knödelsilo","18 Meter","Felix","27.10.2023",""
-"1708444698-97","https://routen.heavensgate-muc.de/routen.html","..Hedis Butterbrot","https://routen.heavensgate-muc.de/routen/route/614.html","Route: 
+				(4.00)","5+","5+","801 / Indoor","Trichter Knödelsilo","18 Meter","Felix","27.10.2023",""
+"1709365125-82","https://routen.heavensgate-muc.de/routen.html","..Hedis Butterbrot","https://routen.heavensgate-muc.de/routen/route/614.html","Route: 
             ..Hedis Butterbrot            				
 				(4.41)","7-","7-","917 / Indoor","Überhang rechts","15 Meter","Celina","31.10.2023",""
-"1708444700-98","https://routen.heavensgate-muc.de/routen.html","Niemand weiß von..","https://routen.heavensgate-muc.de/routen/route/615.html","Route: 
+"1709365127-83","https://routen.heavensgate-muc.de/routen.html","Niemand weiß von..","https://routen.heavensgate-muc.de/routen/route/615.html","Route: 
             Niemand weiß von..            				
 				(4.25)","5+","5+","917 / Indoor","Überhang rechts","15 Meter","Celina","31.10.2023",""
-"1708444703-99","https://routen.heavensgate-muc.de/routen.html","Dunkle Passage","https://routen.heavensgate-muc.de/routen/route/616.html","Route: 
+"1709365129-84","https://routen.heavensgate-muc.de/routen.html","Dunkle Passage","https://routen.heavensgate-muc.de/routen/route/616.html","Route: 
             Dunkle Passage             				
 				(5.00)","8","8","804 / Indoor","Trichter Knödelsilo","18 Meter","Celina","31.10.2023",""
-"1708444705-100","https://routen.heavensgate-muc.de/routen.html","Peanut  u can  move","https://routen.heavensgate-muc.de/routen/route/617.html","Route: 
+"1709365132-85","https://routen.heavensgate-muc.de/routen.html","Peanut  u can  move","https://routen.heavensgate-muc.de/routen/route/617.html","Route: 
             Peanut  u can  move            				
 				(4.71)","8-","8-","801 / Indoor","Trichter Knödelsilo","18 Meter","Julius","03.11.2023","Ohne Oberer linke Betonverschneidung!"
-"1708444707-101","https://routen.heavensgate-muc.de/routen.html","Kreidebleich","https://routen.heavensgate-muc.de/routen/route/618.html","Route: 
+"1709365134-86","https://routen.heavensgate-muc.de/routen.html","Kreidebleich","https://routen.heavensgate-muc.de/routen/route/618.html","Route: 
             Kreidebleich            				
-				(4.44)","7-/7","7-/7","802 / Indoor","Trichter Knödelsilo","18 Meter","Julius","03.11.2023",""
-"1708444710-102","https://routen.heavensgate-muc.de/routen.html","The lazy CAT","https://routen.heavensgate-muc.de/routen/route/619.html","Route: 
+				(4.50)","7-/7","7-/7","802 / Indoor","Trichter Knödelsilo","18 Meter","Julius","03.11.2023",""
+"1709365136-87","https://routen.heavensgate-muc.de/routen.html","The lazy CAT","https://routen.heavensgate-muc.de/routen/route/619.html","Route: 
             The lazy CAT            				
-				(4.38)","6-","6-","903 / Indoor","Platte links","15 Meter","Hedi","07.11.2023",""
-"1708444712-103","https://routen.heavensgate-muc.de/routen.html","Flamingocatwalk","https://routen.heavensgate-muc.de/routen/route/620.html","Route: 
+				(4.29)","6-","6-","903 / Indoor","Platte links","15 Meter","Hedi","07.11.2023",""
+"1709365138-88","https://routen.heavensgate-muc.de/routen.html","Flamingocatwalk","https://routen.heavensgate-muc.de/routen/route/620.html","Route: 
             Flamingocatwalk            				
-				(4.58)","7-","7-","903 / Indoor","Platte links","15 Meter","Hedi","07.11.2023",""
-"1708444714-104","https://routen.heavensgate-muc.de/routen.html","GuMo","https://routen.heavensgate-muc.de/routen/route/621.html","Route: 
+				(4.54)","7-","7-","903 / Indoor","Platte links","15 Meter","Hedi","07.11.2023",""
+"1709365140-89","https://routen.heavensgate-muc.de/routen.html","GuMo","https://routen.heavensgate-muc.de/routen/route/621.html","Route: 
             GuMo            				
-				(4.50)","8","8","307 / Indoor","Silo 3","30 Meter","Ruben","09.11.2023","OHNE VERSCHNEIDUNG!"
-"1708444717-105","https://routen.heavensgate-muc.de/routen.html","Das Schloss  im  Himmel","https://routen.heavensgate-muc.de/routen/route/622.html","Route: 
+				(4.50)","8/8+","8/8+","307 / Indoor","Silo 3","30 Meter","Ruben","09.11.2023","OHNE VERSCHNEIDUNG!"
+"1709365143-90","https://routen.heavensgate-muc.de/routen.html","Das Schloss  im  Himmel","https://routen.heavensgate-muc.de/routen/route/622.html","Route: 
             Das Schloss  im  Himmel            				
 				(4.43)","7-","7-","406 / Indoor","Silo 4","30 Meter","Celina","14.11.2023",""
-"1708444719-106","https://routen.heavensgate-muc.de/routen.html","Project easy","https://routen.heavensgate-muc.de/routen/route/623.html","Route: 
+"1709365146-91","https://routen.heavensgate-muc.de/routen.html","Project easy","https://routen.heavensgate-muc.de/routen/route/623.html","Route: 
             Project easy            				
 				(3.92)","6/6+","6/6+","805 / Indoor","Trichter Knödelsilo","18 Meter","Fedir","15.11.2023",""
-"1708444721-107","https://routen.heavensgate-muc.de/routen.html","Noisyness","https://routen.heavensgate-muc.de/routen/route/624.html","Route: 
+"1709365148-92","https://routen.heavensgate-muc.de/routen.html","Noisyness","https://routen.heavensgate-muc.de/routen/route/624.html","Route: 
             Noisyness            				
 				(4.86)","8-/8","8-/8","805 / Indoor","Trichter Knödelsilo","18 Meter","Fedir","15.11.2023",""
-"1708444723-108","https://routen.heavensgate-muc.de/routen.html","Maulkörbchen","https://routen.heavensgate-muc.de/routen/route/625.html","Route: 
+"1709365150-93","https://routen.heavensgate-muc.de/routen.html","Maulkörbchen","https://routen.heavensgate-muc.de/routen/route/625.html","Route: 
             Maulkörbchen            				
-				(4.75)","7-/7","7-","907 / Indoor","Platte rechts","15 Meter","Ruben","21.11.2023",""
-"1708444726-109","https://routen.heavensgate-muc.de/routen.html","Fressbrett","https://routen.heavensgate-muc.de/routen/route/626.html","Route: 
+				(4.81)","7-/7","7-","907 / Indoor","Platte rechts","15 Meter","Ruben","21.11.2023",""
+"1709365152-94","https://routen.heavensgate-muc.de/routen.html","Fressbrett","https://routen.heavensgate-muc.de/routen/route/626.html","Route: 
             Fressbrett            				
-				(4.67)","8-","8-","907 / Indoor","Platte rechts","15 Meter","Ruben","21.11.2023",""
-"1708444728-110","https://routen.heavensgate-muc.de/routen.html","Hemmungslos","https://routen.heavensgate-muc.de/routen/route/627.html","Route: 
+				(4.60)","8-","8-","907 / Indoor","Platte rechts","15 Meter","Ruben","21.11.2023",""
+"1709365155-95","https://routen.heavensgate-muc.de/routen.html","Hemmungslos","https://routen.heavensgate-muc.de/routen/route/627.html","Route: 
             Hemmungslos            				
 				(3.83)","6/6+","6/6+","912 / Indoor","Überhang","15 Meter","Felix","24.11.2023",""
-"1708444730-111","https://routen.heavensgate-muc.de/routen.html","CandyCrush","https://routen.heavensgate-muc.de/routen/route/628.html","Route: 
+"1709365157-96","https://routen.heavensgate-muc.de/routen.html","CandyCrush","https://routen.heavensgate-muc.de/routen/route/628.html","Route: 
             CandyCrush            				
 				(4.86)","7-","7-","206 / Indoor","Silo 2","30 Meter","Gigi","29.11.2023",""
-"1708444733-112","https://routen.heavensgate-muc.de/routen.html","Schneestütz","https://routen.heavensgate-muc.de/routen/route/629.html","Route: 
+"1709365159-97","https://routen.heavensgate-muc.de/routen.html","Schneestütz","https://routen.heavensgate-muc.de/routen/route/629.html","Route: 
             Schneestütz            				
 				(3.80)","7","7","703 / Indoor","roter Knödelsilo","15 Meter","Julian","30.11.2023",""
-"1708444735-113","https://routen.heavensgate-muc.de/routen.html","Schneeflow","https://routen.heavensgate-muc.de/routen/route/630.html","Route: 
+"1709365161-98","https://routen.heavensgate-muc.de/routen.html","Schneeflow","https://routen.heavensgate-muc.de/routen/route/630.html","Route: 
             Schneeflow            				
 				(4.43)","6/6+","6/6+","703 / Indoor","roter Knödelsilo","15 Meter","Julian","30.11.2023",""
-"1708444737-114","https://routen.heavensgate-muc.de/routen.html","Brachialer Zapfenstreich","https://routen.heavensgate-muc.de/routen/route/631.html","Route: 
+"1709365163-99","https://routen.heavensgate-muc.de/routen.html","Brachialer Zapfenstreich","https://routen.heavensgate-muc.de/routen/route/631.html","Route: 
             Brachialer Zapfenstreich            				
-				(4.22)","7+/8-","7+/8-","912 / Indoor","Überhang","15 Meter","Vinz","01.12.2023",""
-"1708444739-115","https://routen.heavensgate-muc.de/routen.html","Brezn aus Bogota","https://routen.heavensgate-muc.de/routen/route/632.html","Route: 
+				(4.20)","7+/8-","7+/8-","912 / Indoor","Überhang","15 Meter","Vinz","01.12.2023",""
+"1709365165-100","https://routen.heavensgate-muc.de/routen.html","Brezn aus Bogota","https://routen.heavensgate-muc.de/routen/route/632.html","Route: 
             Brezn aus Bogota             				
 				(4.50)","8+","8+","912 / Indoor","Überhang","15 Meter","Andi","04.12.2023",""
-"1708444742-116","https://routen.heavensgate-muc.de/routen.html","Saufprolet*in","https://routen.heavensgate-muc.de/routen/route/633.html","Route: 
+"1709365168-101","https://routen.heavensgate-muc.de/routen.html","Saufprolet*in","https://routen.heavensgate-muc.de/routen/route/633.html","Route: 
             Saufprolet*in            				
 				(5.00)","9+/10-","9+/10-","912 / Indoor","Überhang","15 Meter","Andi","04.12.2023",""
-"1708444744-117","https://routen.heavensgate-muc.de/routen.html","Hausfreund","https://routen.heavensgate-muc.de/routen/route/634.html","Route: 
+"1709365170-102","https://routen.heavensgate-muc.de/routen.html","Hausfreund","https://routen.heavensgate-muc.de/routen/route/634.html","Route: 
             Hausfreund            				
 				(3.93)","6+","6+","910 / Indoor","Überhang links","15 Meter","Felix","07.12.2023",""
-"1708444746-118","https://routen.heavensgate-muc.de/routen.html","Schienenersatzverkehr","https://routen.heavensgate-muc.de/routen/route/635.html","Route: 
+"1709365172-103","https://routen.heavensgate-muc.de/routen.html","Schienenersatzverkehr","https://routen.heavensgate-muc.de/routen/route/635.html","Route: 
             Schienenersatzverkehr            				
-				(4.33)","5","5","910 / Indoor","Überhang links","15 Meter","Felix","07.12.2023",""
-"1708444749-119","https://routen.heavensgate-muc.de/routen.html","Reibungsrodeo","https://routen.heavensgate-muc.de/routen/route/636.html","Route: 
+				(4.30)","5","5","910 / Indoor","Überhang links","15 Meter","Felix","07.12.2023",""
+"1709365174-104","https://routen.heavensgate-muc.de/routen.html","Reibungsrodeo","https://routen.heavensgate-muc.de/routen/route/636.html","Route: 
             Reibungsrodeo            				
-				(4.25)","7","7","910 / Indoor","Überhang links","15 Meter","Felix","07.12.2023",""
-"1708444751-120","https://routen.heavensgate-muc.de/routen.html","Wer das liest ist doof!","https://routen.heavensgate-muc.de/routen/route/637.html","Route: 
+				(4.31)","7","7","910 / Indoor","Überhang links","15 Meter","Felix","07.12.2023",""
+"1709365176-105","https://routen.heavensgate-muc.de/routen.html","Wer das liest ist doof!","https://routen.heavensgate-muc.de/routen/route/637.html","Route: 
             Wer das liest ist doof!            				
-				(4.22)","6-","6-","503 / Indoor","blauer Knödelsilo","15 Meter","Nikos","11.12.2023","OHNE BETON!"
-"1708444753-121","https://routen.heavensgate-muc.de/routen.html","Bagelkoma","https://routen.heavensgate-muc.de/routen/route/638.html","Route: 
+				(4.30)","5+/6-","6-","503 / Indoor","blauer Knödelsilo","15 Meter","Nikos","11.12.2023","OHNE BETON!"
+"1709365179-106","https://routen.heavensgate-muc.de/routen.html","Bagelkoma","https://routen.heavensgate-muc.de/routen/route/638.html","Route: 
             Bagelkoma            				
-				(4.44)","6+/7-","7-","503 / Indoor","blauer Knödelsilo","15 Meter","Nikos","11.12.2023","OHNE BETON!"
-"1708444755-122","https://routen.heavensgate-muc.de/routen.html","Disco Boy","https://routen.heavensgate-muc.de/routen/route/639.html","Route: 
+				(4.40)","6+/7-","7-","503 / Indoor","blauer Knödelsilo","15 Meter","Nikos","11.12.2023","OHNE BETON!"
+"1709365181-107","https://routen.heavensgate-muc.de/routen.html","Disco Boy","https://routen.heavensgate-muc.de/routen/route/639.html","Route: 
             Disco Boy             				
 				(3.83)","6+/7-","6+/7-","207 / Indoor","Silo 2","30 Meter","Hedi","12.12.2023","Spiel mal das Lied…"
-"1708444758-123","https://routen.heavensgate-muc.de/routen.html","Generation of Hope","https://routen.heavensgate-muc.de/routen/route/640.html","Route: 
+"1709365183-108","https://routen.heavensgate-muc.de/routen.html","Generation of Hope","https://routen.heavensgate-muc.de/routen/route/640.html","Route: 
             Generation of Hope             				
-				(4.57)","7-","7-","906 / Indoor","Platte rechts","15 Meter","Max M.","14.12.2023",""
-"1708444760-124","https://routen.heavensgate-muc.de/routen.html","Transcending Boarders","https://routen.heavensgate-muc.de/routen/route/641.html","Route: 
+				(4.63)","7-","7-","906 / Indoor","Platte rechts","15 Meter","Max M.","14.12.2023",""
+"1709365185-109","https://routen.heavensgate-muc.de/routen.html","Transcending Boarders","https://routen.heavensgate-muc.de/routen/route/641.html","Route: 
             Transcending Boarders             				
 				(4.70)","8","8","906 / Indoor","Platte rechts","15 Meter","Max M.","14.12.2023",""
-"1708444762-125","https://routen.heavensgate-muc.de/routen.html","Bongo Bong Original","https://routen.heavensgate-muc.de/routen/route/642.html","Route: 
+"1709365187-110","https://routen.heavensgate-muc.de/routen.html","Bongo Bong Original","https://routen.heavensgate-muc.de/routen/route/642.html","Route: 
             Bongo Bong Original            				
 				(4.14)","7/7+","7/7+","901 / Indoor","Platte links","15 Meter","Andi","14.12.2023",""
-"1708444764-126","https://routen.heavensgate-muc.de/routen.html","Bongo Bong Remix","https://routen.heavensgate-muc.de/routen/route/643.html","Route: 
+"1709365189-111","https://routen.heavensgate-muc.de/routen.html","Bongo Bong Remix","https://routen.heavensgate-muc.de/routen/route/643.html","Route: 
             Bongo Bong Remix            				
-				(4.29)","6-","6-","901 / Indoor","Platte links","15 Meter","Hedi","14.12.2023",""
-"1708444767-127","https://routen.heavensgate-muc.de/routen.html","Voll daneben","https://routen.heavensgate-muc.de/routen/route/644.html","Route: 
+				(4.31)","6-","6-","901 / Indoor","Platte links","15 Meter","Hedi","14.12.2023",""
+"1709365192-112","https://routen.heavensgate-muc.de/routen.html","Voll daneben","https://routen.heavensgate-muc.de/routen/route/644.html","Route: 
             Voll daneben            				
-				(4.67)","8-/8","8-/8","901 / Indoor","Platte links","15 Meter","Felix","15.12.2023",""
-"1708444769-128","https://routen.heavensgate-muc.de/routen.html","Go take antistress pills","https://routen.heavensgate-muc.de/routen/route/645.html","Route: 
+				(4.50)","8-/8","8-/8","901 / Indoor","Platte links","15 Meter","Felix","15.12.2023",""
+"1709365194-113","https://routen.heavensgate-muc.de/routen.html","Go take antistress pills","https://routen.heavensgate-muc.de/routen/route/645.html","Route: 
             Go take antistress pills            				
 				(5.00)","9","9","702 / Indoor","roter Knödelsilo","15 Meter","Fedir","18.12.2023",""
-"1708444771-129","https://routen.heavensgate-muc.de/routen.html","Go take a coffee","https://routen.heavensgate-muc.de/routen/route/646.html","Route: 
+"1709365196-114","https://routen.heavensgate-muc.de/routen.html","Go take a coffee","https://routen.heavensgate-muc.de/routen/route/646.html","Route: 
             Go take a coffee            				
 				(5.00)","8+","8+/9-","702 / Indoor","roter Knödelsilo","15 Meter","Fedir","18.12.2023",""
-"1708444773-130","https://routen.heavensgate-muc.de/routen.html","Go for a beer","https://routen.heavensgate-muc.de/routen/route/647.html","Route: 
+"1709365198-115","https://routen.heavensgate-muc.de/routen.html","Go for a beer","https://routen.heavensgate-muc.de/routen/route/647.html","Route: 
             Go for a beer            				
 				(4.60)","8-","8-","702 / Indoor","roter Knödelsilo","15 Meter","Fedir","18.12.2023",""
-"1708444775-131","https://routen.heavensgate-muc.de/routen.html","Go for a lunch","https://routen.heavensgate-muc.de/routen/route/648.html","Route: 
+"1709365200-116","https://routen.heavensgate-muc.de/routen.html","Go for a lunch","https://routen.heavensgate-muc.de/routen/route/648.html","Route: 
             Go for a lunch            				
-				(4.23)","7/7+","7/7+","702 / Indoor","roter Knödelsilo","15 Meter","Fedir","18.12.2023",""
-"1708444778-132","https://routen.heavensgate-muc.de/routen.html","Go home","https://routen.heavensgate-muc.de/routen/route/649.html","Route: 
+				(4.17)","7/7+","7/7+","702 / Indoor","roter Knödelsilo","15 Meter","Fedir","18.12.2023",""
+"1709365202-117","https://routen.heavensgate-muc.de/routen.html","Go home","https://routen.heavensgate-muc.de/routen/route/649.html","Route: 
             Go home            				
 				(0.00)","9+/10-","9+/10-","702 / Indoor","roter Knödelsilo","15 Meter","Fedir","18.12.2023","OHNE BETON"
-"1708444780-133","https://routen.heavensgate-muc.de/routen.html","Polishing Poop","https://routen.heavensgate-muc.de/routen/route/650.html","Route: 
+"1709365205-118","https://routen.heavensgate-muc.de/routen.html","Polishing Poop","https://routen.heavensgate-muc.de/routen/route/650.html","Route: 
             Polishing Poop            				
 				(4.11)","6/6+","6/6+","402 / Indoor","Silo 4","30 Meter","Felix","21.12.2023",""
-"1708444782-134","https://routen.heavensgate-muc.de/routen.html","Sendhoibe","https://routen.heavensgate-muc.de/routen/route/651.html","Route: 
+"1709365207-119","https://routen.heavensgate-muc.de/routen.html","Sendhoibe","https://routen.heavensgate-muc.de/routen/route/651.html","Route: 
             Sendhoibe            				
-				(4.00)","6","6-","506 / Indoor","gelber Knödelsilo","15 Meter","Nikos","22.12.2023","OHNE BETON!"
-"1708444784-135","https://routen.heavensgate-muc.de/routen.html","Powerdübel","https://routen.heavensgate-muc.de/routen/route/652.html","Route: 
+				(3.60)","6-/6","6-","506 / Indoor","gelber Knödelsilo","15 Meter","Nikos","22.12.2023","OHNE BETON!"
+"1709365209-120","https://routen.heavensgate-muc.de/routen.html","Powerdübel","https://routen.heavensgate-muc.de/routen/route/652.html","Route: 
             Powerdübel            				
-				(4.78)","6+/7-","7-","506 / Indoor","gelber Knödelsilo","15 Meter","Nikos","22.12.2023","OHNE BETON!"
-"1708444787-136","https://routen.heavensgate-muc.de/routen.html","Premiere","https://routen.heavensgate-muc.de/routen/route/653.html","Route: 
+				(4.75)","7-","7-","506 / Indoor","gelber Knödelsilo","15 Meter","Nikos","22.12.2023","OHNE BETON!"
+"1709365212-121","https://routen.heavensgate-muc.de/routen.html","Premiere","https://routen.heavensgate-muc.de/routen/route/653.html","Route: 
             Premiere            				
-				(4.13)","6/6+","6/6+","501 / Indoor","blauer Knödelsilo","15 Meter","Jule","22.12.2023",""
-"1708444789-137","https://routen.heavensgate-muc.de/routen.html","Mint-Julep","https://routen.heavensgate-muc.de/routen/route/654.html","Route: 
+				(4.20)","6/6+","6/6+","501 / Indoor","blauer Knödelsilo","15 Meter","Jule","22.12.2023",""
+"1709365214-122","https://routen.heavensgate-muc.de/routen.html","Mint-Julep","https://routen.heavensgate-muc.de/routen/route/654.html","Route: 
             Mint-Julep            				
 				(4.33)","5","5","908 / Indoor","Überhang links","15 Meter","JJ","28.12.2023",""
-"1708444791-138","https://routen.heavensgate-muc.de/routen.html","Dotter vs. Otter","https://routen.heavensgate-muc.de/routen/route/655.html","Route: 
+"1709365222-123","https://routen.heavensgate-muc.de/routen.html","Dotter vs. Otter","https://routen.heavensgate-muc.de/routen/route/655.html","Route: 
             Dotter vs. Otter            				
 				(4.33)","6","6","908 / Indoor","Überhang links","15 Meter","JJ","28.12.2023",""
-"1708444793-139","https://routen.heavensgate-muc.de/routen.html","Pappenpater","https://routen.heavensgate-muc.de/routen/route/656.html","Route: 
+"1709365232-124","https://routen.heavensgate-muc.de/routen.html","Pappenpater","https://routen.heavensgate-muc.de/routen/route/656.html","Route: 
             Pappenpater            				
 				(4.13)","6+/7-","6+/7-","908 / Indoor","Überhang links","15 Meter","Ruben","29.12.2023",""
-"1708444796-140","https://routen.heavensgate-muc.de/routen.html","Asselschlamassel","https://routen.heavensgate-muc.de/routen/route/657.html","Route: 
+"1709365252-125","https://routen.heavensgate-muc.de/routen.html","Asselschlamassel","https://routen.heavensgate-muc.de/routen/route/657.html","Route: 
             Asselschlamassel            				
 				(4.40)","7","7","908 / Indoor","Überhang links","15 Meter","Ruben","29.12.2023",""
-"1708444798-141","https://routen.heavensgate-muc.de/routen.html","Hardly welcome","https://routen.heavensgate-muc.de/routen/route/658.html","Route: 
+"1709365262-126","https://routen.heavensgate-muc.de/routen.html","Hardly welcome","https://routen.heavensgate-muc.de/routen/route/658.html","Route: 
             Hardly welcome            				
 				(4.33)","7+/8-","7+/8-","908 / Indoor","Überhang links","15 Meter","Ruben","29.12.2023",""
-"1708444800-142","https://routen.heavensgate-muc.de/routen.html","Schlüsseldilemma","https://routen.heavensgate-muc.de/routen/route/659.html","Route: 
+"1709365277-127","https://routen.heavensgate-muc.de/routen.html","Schlüsseldilemma","https://routen.heavensgate-muc.de/routen/route/659.html","Route: 
             Schlüsseldilemma             				
-				(4.13)","6-","6-","911 / Indoor","Überhang links","15 Meter","Nikos","09.01.2024",""
-"1708444802-143","https://routen.heavensgate-muc.de/routen.html","Der verlorene Schuh","https://routen.heavensgate-muc.de/routen/route/660.html","Route: 
+				(4.00)","6-","6-","911 / Indoor","Überhang links","15 Meter","Nikos","09.01.2024",""
+"1709365297-128","https://routen.heavensgate-muc.de/routen.html","Der verlorene Schuh","https://routen.heavensgate-muc.de/routen/route/660.html","Route: 
             Der verlorene Schuh             				
 				(4.65)","7-","7-/7","911 / Indoor","Überhang links","15 Meter","Nikos","09.01.2024",""
-"1708444805-144","https://routen.heavensgate-muc.de/routen.html","9 vegane Nuggets","https://routen.heavensgate-muc.de/routen/route/661.html","Route: 
+"1709365307-129","https://routen.heavensgate-muc.de/routen.html","9 vegane Nuggets","https://routen.heavensgate-muc.de/routen/route/661.html","Route: 
             9 vegane Nuggets             				
-				(4.29)","8-","8-/8","911 / Indoor","Überhang links","15 Meter","Nikos","09.01.2024",""
-"1708444807-145","https://routen.heavensgate-muc.de/routen.html","Zone","https://routen.heavensgate-muc.de/routen/route/662.html","Route: 
+				(4.19)","8-","8-/8","911 / Indoor","Überhang links","15 Meter","Nikos","09.01.2024",""
+"1709365322-130","https://routen.heavensgate-muc.de/routen.html","Zone","https://routen.heavensgate-muc.de/routen/route/662.html","Route: 
             Zone            				
-				(4.00)","7-","6+/7-","603 / Indoor","Tufa Knödelsilo","18 Meter","Felix","11.01.2024","OHNE BETON!"
-"1708444809-146","https://routen.heavensgate-muc.de/routen.html","Prügelknabe","https://routen.heavensgate-muc.de/routen/route/663.html","Route: 
+				(3.93)","7-","6+/7-","603 / Indoor","Tufa Knödelsilo","18 Meter","Felix","11.01.2024","OHNE BETON!"
+"1709365337-131","https://routen.heavensgate-muc.de/routen.html","Prügelknabe","https://routen.heavensgate-muc.de/routen/route/663.html","Route: 
             Prügelknabe            				
 				(4.18)","7+/8-","7+/8-","603 / Indoor","Tufa Knödelsilo","18 Meter","Felix","11.01.2024","OHNE BETON!"
-"1708444812-147","https://routen.heavensgate-muc.de/routen.html","Stollen","https://routen.heavensgate-muc.de/routen/route/664.html","Route: 
+"1709365352-132","https://routen.heavensgate-muc.de/routen.html","Stollen","https://routen.heavensgate-muc.de/routen/route/664.html","Route: 
             Stollen            				
-				(4.33)","5+","5+","504 / Indoor","gelber Knödelsilo","15 Meter","Claudia","15.01.2024",""
-"1708444814-148","https://routen.heavensgate-muc.de/routen.html","ADHS","https://routen.heavensgate-muc.de/routen/route/665.html","Route: 
+				(3.75)","5+","5+","504 / Indoor","gelber Knödelsilo","15 Meter","Claudia","15.01.2024",""
+"1709365367-133","https://routen.heavensgate-muc.de/routen.html","ADHS","https://routen.heavensgate-muc.de/routen/route/665.html","Route: 
             ADHS            				
 				(4.50)","8+","8+/9-","302 / Indoor","Silo 3","30 Meter","Ruben","16.01.2024","OHNE VERSCHNEIDUNG !"
-"1708444816-149","https://routen.heavensgate-muc.de/routen.html","Sesselfurzer","https://routen.heavensgate-muc.de/routen/route/666.html","Route: 
+"1709365382-134","https://routen.heavensgate-muc.de/routen.html","Sesselfurzer","https://routen.heavensgate-muc.de/routen/route/666.html","Route: 
             Sesselfurzer            				
 				(4.50)","7/7+","7/7+","201 / Indoor","Silo 2","30 Meter","Nikos","18.01.2024",""
-"1708444819-150","https://routen.heavensgate-muc.de/routen.html","Schlafnase","https://routen.heavensgate-muc.de/routen/route/667.html","Route: 
+"1709365397-135","https://routen.heavensgate-muc.de/routen.html","Schlafnase","https://routen.heavensgate-muc.de/routen/route/667.html","Route: 
             Schlafnase            				
 				(4.50)","5+","5+","202 / Indoor","Silo 2","30 Meter","Nikos","18.01.2024",""
-"1708444821-151","https://routen.heavensgate-muc.de/routen.html","Keine Acht für niemand","https://routen.heavensgate-muc.de/routen/route/668.html","Route: 
+"1709365417-136","https://routen.heavensgate-muc.de/routen.html","Keine Acht für niemand","https://routen.heavensgate-muc.de/routen/route/668.html","Route: 
             Keine Acht für niemand            				
-				(4.00)","9-","9-","603 / Indoor","Tufa Knödelsilo","18 Meter","Julius","19.01.2024","OHNE BETON + oben bissel Morpho ! 
+				(4.00)","9-/9","9-","603 / Indoor","Tufa Knödelsilo","18 Meter","Julius","19.01.2024","OHNE BETON + oben bissel Morpho ! 
 Andi sagt 9-/9"
-"1708444823-152","https://routen.heavensgate-muc.de/routen.html","Präventiv gewalttätig","https://routen.heavensgate-muc.de/routen/route/669.html","Route: 
+"1709365427-137","https://routen.heavensgate-muc.de/routen.html","Präventiv gewalttätig","https://routen.heavensgate-muc.de/routen/route/669.html","Route: 
             Präventiv gewalttätig             				
 				(3.57)","6+","6+/7-","608 / Indoor","Tufa Knödelsilo","18 Meter","Julius","19.01.2024",""
-"1708444825-153","https://routen.heavensgate-muc.de/routen.html","4+4=5","https://routen.heavensgate-muc.de/routen/route/670.html","Route: 
+"1709365442-138","https://routen.heavensgate-muc.de/routen.html","4+4=5","https://routen.heavensgate-muc.de/routen/route/670.html","Route: 
             4+4=5            				
 				(3.75)","5","5","608 / Indoor","Tufa Knödelsilo","18 Meter","Julius","19.01.2024","Bis ganz oben .."
-"1708444827-154","https://routen.heavensgate-muc.de/routen.html","HORMONHOCH","https://routen.heavensgate-muc.de/routen/route/671.html","Route: 
+"1709365457-139","https://routen.heavensgate-muc.de/routen.html","HORMONHOCH","https://routen.heavensgate-muc.de/routen/route/671.html","Route: 
             HORMONHOCH            				
-				(4.20)","5+","5+","502 / Indoor","blauer Knödelsilo","15 Meter","Claudia","19.01.2024",""
-"1708444830-155","https://routen.heavensgate-muc.de/routen.html","Auf die Blaue","https://routen.heavensgate-muc.de/routen/route/672.html","Route: 
+				(4.33)","5+","5+","502 / Indoor","blauer Knödelsilo","15 Meter","Claudia","19.01.2024",""
+"1709365472-140","https://routen.heavensgate-muc.de/routen.html","Auf die Blaue","https://routen.heavensgate-muc.de/routen/route/672.html","Route: 
             Auf die Blaue            				
-				(4.29)","6","6","914 / Indoor","Überhang","15 Meter","Nikos","22.01.2024","6-/6"
-"1708444832-156","https://routen.heavensgate-muc.de/routen.html","Talisman","https://routen.heavensgate-muc.de/routen/route/673.html","Route: 
+				(4.25)","6","6","914 / Indoor","Überhang","15 Meter","Nikos","22.01.2024","6-/6"
+"1709365492-141","https://routen.heavensgate-muc.de/routen.html","Talisman","https://routen.heavensgate-muc.de/routen/route/673.html","Route: 
             Talisman            				
 				(4.27)","7/7+","7","914 / Indoor","Überhang","15 Meter","Nikos","22.01.2024",""
-"1708444834-157","https://routen.heavensgate-muc.de/routen.html","C‘est la vie","https://routen.heavensgate-muc.de/routen/route/674.html","Route: 
+"1709365502-142","https://routen.heavensgate-muc.de/routen.html","C‘est la vie","https://routen.heavensgate-muc.de/routen/route/674.html","Route: 
             C‘est la vie             				
-				(4.40)","7-/7","7-/7","502 / Indoor","blauer Knödelsilo","15 Meter","Jule","23.01.2024",""
-"1708444836-158","https://routen.heavensgate-muc.de/routen.html","Achterbahn der Gefühle","https://routen.heavensgate-muc.de/routen/route/675.html","Route: 
+				(4.42)","7-/7","7-/7","502 / Indoor","blauer Knödelsilo","15 Meter","Jule","23.01.2024",""
+"1709365522-143","https://routen.heavensgate-muc.de/routen.html","Achterbahn der Gefühle","https://routen.heavensgate-muc.de/routen/route/675.html","Route: 
             Achterbahn der Gefühle            				
-				(4.20)","7+","7+","501 / Indoor","blauer Knödelsilo","15 Meter","Jule","23.01.2024",""
-"1708444838-159","https://routen.heavensgate-muc.de/routen.html","Palumbianischer Zwickeldreher","https://routen.heavensgate-muc.de/routen/route/676.html","Route: 
+				(4.14)","7+","7+","501 / Indoor","blauer Knödelsilo","15 Meter","Jule","23.01.2024",""
+"1709365537-144","https://routen.heavensgate-muc.de/routen.html","Palumbianischer Zwickeldreher","https://routen.heavensgate-muc.de/routen/route/676.html","Route: 
             Palumbianischer Zwickeldreher             				
-				(4.17)","6+/7-","6+/7-","913 / Indoor","Überhang","15 Meter","KletterPuls","29.01.2024",""
-"1708444841-160","https://routen.heavensgate-muc.de/routen.html","Donut Romantik","https://routen.heavensgate-muc.de/routen/route/677.html","Route: 
+				(4.00)","6+/7-","6+/7-","913 / Indoor","Überhang","15 Meter","KletterPuls","29.01.2024",""
+"1709365552-145","https://routen.heavensgate-muc.de/routen.html","Donut Romantik","https://routen.heavensgate-muc.de/routen/route/677.html","Route: 
             Donut Romantik             				
 				(4.08)","7+/8-","7+","913 / Indoor","Überhang","15 Meter","Nikos","30.01.2024","JETZT NOCH BESSER!"
-"1708444843-161","https://routen.heavensgate-muc.de/routen.html","Punkt 18 Uhr","https://routen.heavensgate-muc.de/routen/route/678.html","Route: 
+"1709365567-146","https://routen.heavensgate-muc.de/routen.html","Punkt 18 Uhr","https://routen.heavensgate-muc.de/routen/route/678.html","Route: 
             Punkt 18 Uhr             				
 				(4.67)","9+","9+","913 / Indoor","Überhang","15 Meter","Nikos","30.01.2024","JETZT NOCH BESSER !"
-"1708444845-162","https://routen.heavensgate-muc.de/routen.html","Voll-Strecker","https://routen.heavensgate-muc.de/routen/route/679.html","Route: 
+"1709365582-147","https://routen.heavensgate-muc.de/routen.html","Voll-Strecker","https://routen.heavensgate-muc.de/routen/route/679.html","Route: 
             Voll-Strecker            				
-				(4.67)","6+","6+","504 / Indoor","gelber Knödelsilo","15 Meter","Claudia","01.02.2024",""
-"1708444847-163","https://routen.heavensgate-muc.de/routen.html","Kontakt Alllergie","https://routen.heavensgate-muc.de/routen/route/680.html","Route: 
+				(3.88)","6/6+","6+","504 / Indoor","gelber Knödelsilo","15 Meter","Claudia","01.02.2024",""
+"1709365591-148","https://routen.heavensgate-muc.de/routen.html","Kontakt Alllergie","https://routen.heavensgate-muc.de/routen/route/680.html","Route: 
             Kontakt Alllergie            				
-				(4.13)","6","6-","804 / Indoor","Trichter Knödelsilo","18 Meter","Felix","02.02.2024",""
-"1708444850-164","https://routen.heavensgate-muc.de/routen.html","Body &  Soul","https://routen.heavensgate-muc.de/routen/route/681.html","Route: 
+				(4.11)","6","6-","804 / Indoor","Trichter Knödelsilo","18 Meter","Felix","02.02.2024",""
+"1709365593-149","https://routen.heavensgate-muc.de/routen.html","Body &  Soul","https://routen.heavensgate-muc.de/routen/route/681.html","Route: 
             Body &  Soul            				
-				(3.86)","7","7","804 / Indoor","Trichter Knödelsilo","18 Meter","Felix","02.02.2024",""
-"1708444852-165","https://routen.heavensgate-muc.de/routen.html","Zeitreise","https://routen.heavensgate-muc.de/routen/route/682.html","Route: 
+				(3.88)","7","7","804 / Indoor","Trichter Knödelsilo","18 Meter","Felix","02.02.2024",""
+"1709365596-150","https://routen.heavensgate-muc.de/routen.html","Zeitreise","https://routen.heavensgate-muc.de/routen/route/682.html","Route: 
             Zeitreise            				
-				(4.50)","6","6-","505 / Indoor","gelber Knödelsilo","15 Meter","David","09.02.2024",""
-"1708444854-166","https://routen.heavensgate-muc.de/routen.html","Wer ein Smiley zu viel macht..","https://routen.heavensgate-muc.de/routen/route/683.html","Route: 
+				(4.20)","6-/6","6-","505 / Indoor","gelber Knödelsilo","15 Meter","David","09.02.2024",""
+"1709365598-151","https://routen.heavensgate-muc.de/routen.html","Wer ein Smiley zu viel macht..","https://routen.heavensgate-muc.de/routen/route/683.html","Route: 
             Wer ein Smiley zu viel macht..            				
-				(3.80)","6-","6-","904 / Indoor","Platte links","15 Meter","Ruben","15.02.2024","GRAD NOCH NICHT BESTÄTIGT"
-"1708444856-167","https://routen.heavensgate-muc.de/routen.html","..der hat irgendwann auch nix mehr z. lachen","https://routen.heavensgate-muc.de/routen/route/684.html","Route: 
+				(3.57)","6-/6","6-","904 / Indoor","Platte links","15 Meter","Ruben","15.02.2024","GRAD NOCH NICHT BESTÄTIGT"
+"1709365600-152","https://routen.heavensgate-muc.de/routen.html","..der hat irgendwann auch nix mehr z. lachen","https://routen.heavensgate-muc.de/routen/route/684.html","Route: 
             ..der hat irgendwann auch nix mehr z. lachen            				
-				(4.75)","7","7","904 / Indoor","Platte links","15 Meter","Ruben","15.02.2024","GRAD NOCH NICHT BESTÄTIGT"
-"1708444859-168","https://routen.heavensgate-muc.de/routen.html","?","https://routen.heavensgate-muc.de/routen/route/685.html","Route: 
-            ?            				
-				(0.00)","6-","6-","306 / Indoor","Silo 3","30 Meter","Julian","20.02.2024",""
+				(4.00)","7-/7","7","904 / Indoor","Platte links","15 Meter","Ruben","15.02.2024","GRAD NOCH NICHT BESTÄTIGT"
+"1709365602-153","https://routen.heavensgate-muc.de/routen.html","Dihedral rain","https://routen.heavensgate-muc.de/routen/route/685.html","Route: 
+            Dihedral rain            				
+				(4.00)","6-/6","6-","306 / Indoor","Silo 3","30 Meter","Julian","20.02.2024",""
+"1709365605-154","https://routen.heavensgate-muc.de/routen.html","Cinderelllll….doch nicht","https://routen.heavensgate-muc.de/routen/route/686.html","Route: 
+            Cinderelllll….doch nicht            				
+				(5.00)","7/7+","7/7+","403 / Indoor","Silo 4","30 Meter","JJ","22.02.2024",""
+"1709365607-155","https://routen.heavensgate-muc.de/routen.html","Liebe lebt leichter","https://routen.heavensgate-muc.de/routen/route/687.html","Route: 
+            Liebe lebt leichter            				
+				(0.00)","6-/6","6-/6","D07 / Outdoor","Schlafzimmer","18 Meter","KletterPuls","26.02.2024",""
+"1709365609-156","https://routen.heavensgate-muc.de/routen.html","Apfelsaft im Tetrapack","https://routen.heavensgate-muc.de/routen/route/688.html","Route: 
+            Apfelsaft im Tetrapack            				
+				(0.00)","5+/6-","5+/6-","D06 / Outdoor","Schlafzimmer","18 Meter","KletterPuls","26.02.2024",""
+"1709365611-157","https://routen.heavensgate-muc.de/routen.html","Only the  best for the Gate!","https://routen.heavensgate-muc.de/routen/route/689.html","Route: 
+            Only the  best for the Gate!            				
+				(5.00)","8-","8-","D05 / Outdoor","Schlafzimmer","18 Meter","Celina","27.02.2024",""
+"1709365613-158","https://routen.heavensgate-muc.de/routen.html","2302","https://routen.heavensgate-muc.de/routen/route/690.html","Route: 
+            2302            				
+				(0.00)","6-","6-","D05 / Outdoor","Schlafzimmer","18 Meter","Celina","27.02.2024","HAPPY BIRTHDAY CELINA !!"
+"1709365615-159","https://routen.heavensgate-muc.de/routen.html","Schlafzimmerjubiläum","https://routen.heavensgate-muc.de/routen/route/691.html","Route: 
+            Schlafzimmerjubiläum            				
+				(0.00)","7-","7-","D04 / Outdoor","Schlafzimmer","18 Meter","Celina","27.02.2024",""
+"1709365618-160","https://routen.heavensgate-muc.de/routen.html","Was ist  an Klettern politisch ?","https://routen.heavensgate-muc.de/routen/route/692.html","Route: 
+            Was ist  an Klettern politisch ?            				
+				(4.33)","7","7","909 / Indoor","Überhang links","15 Meter","Ruben","28.02.2024","Gerne darf jede*r  seine Meinung  zur Frage im Kommentar  abgeben !"
+"1709365620-161","https://routen.heavensgate-muc.de/routen.html","Sunny sunshine","https://routen.heavensgate-muc.de/routen/route/694.html","Route: 
+            Sunny sunshine            				
+				(0.00)","7-","7-","D06 / Outdoor","Schlafzimmer","18 Meter","Julian","29.02.2024",""
+"1709365622-162","https://routen.heavensgate-muc.de/routen.html","Foggy fog","https://routen.heavensgate-muc.de/routen/route/695.html","Route: 
+            Foggy fog            				
+				(0.00)","7/7+","7/7+","D07 / Outdoor","Schlafzimmer","18 Meter","Julian","29.02.2024",""
+"1709365625-163","https://routen.heavensgate-muc.de/routen.html","Fiat Panda","https://routen.heavensgate-muc.de/routen/route/696.html","Route: 
+            Fiat Panda            				
+				(0.00)","5+","5+","204 / Indoor","Silo 2","30 Meter","Fedir","01.03.2024",""
+"1709365627-164","https://routen.heavensgate-muc.de/routen.html","Tow Truck","https://routen.heavensgate-muc.de/routen/route/697.html","Route: 
+            Tow Truck            				
+				(0.00)","8","8","305 / Indoor","Silo 3","30 Meter","Fedir","01.03.2024",""

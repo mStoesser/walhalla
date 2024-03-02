@@ -1,4 +1,4 @@
-const currentCacheVersion = 'v2';
+const currentCacheVersion = 'v3';
 
 self.addEventListener('install', event => {
     console.log('Install ServiceWorker', currentCacheVersion);
