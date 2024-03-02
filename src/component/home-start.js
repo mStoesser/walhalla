@@ -35,7 +35,7 @@ export class HomeStart extends HTMLElement {
     }
 
     get meterDone() {
-        return this.speedData.length > 0 ? this.speedData[this.speedData.length-1].meter : 0
+        return this.speedData.length > 0 ? this.speedData[this.speedData.length-1].meterTotal : 0
     }
 
     getSpeed(i= 1) {
@@ -52,26 +52,18 @@ export class HomeStart extends HTMLElement {
              <tick-routes @ticked="${e=>this.routeTicked(e.detail)}"></tick-routes>
             
              <div class="overview-grid">
-                <span class="green">${asTime(timeGone)}</span>
+                 <span class="green">${asTime(timeGone)}</span>
                  ${this.started ? html`
                      <span class="red">${asTime(this.totalTime - timeGone)}</span>
                  ` : html`
-                     <div>
-                         <span class="red">${asTime(this.totalTime - timeGone)}</span>
-                         <input type="text" name="time" value="${asTime(this.totalTime)}">
-                         <button @click="${_=>this.setTotalTime()}">SET</button>
-                     </div>
+                     <input type="text" name="time" value="${asTime(this.totalTime)}">
                  `}
                 
                 <span class="green">${this.meterDone} m</span>
                  ${this.started ? html`
                      <span class="red">${this.totalMeter - this.meterDone} m</span>
                  ` : html`
-                     <div>
-                         <span class="red">${this.totalMeter - this.meterDone} m</span>
-                         <input type="number" name="meter" value="${this.totalMeter}">
-                         <button @click="${_=>this.setTotalMeter()}">SET</button>
-                     </div>
+                     <input type="number" name="meter" value="${this.totalMeter}">
                  `}
 
                  <span class="${currentSpeed > this.aimedSpeed ? 'green' : 'red'}">${asSpeed(currentSpeed)}</span>
@@ -106,18 +98,23 @@ export class HomeStart extends HTMLElement {
     routeTicked(route) {
         this.tickedRoutes.push(route)
         setItem('tickedRoutes', this.tickedRoutes)
-        const meterDone =  this.meterDone + parseFloat(route.height)
-        const meterDoneAt = Math.floor(new Date().getTime() / 1000)
-        const speed = getSpeed(meterDone, meterDoneAt, this.started)
+        const lastDone = this.speedData.length > 0 ? this.speedData[this.speedData.length-1].time : this.started
+        const meterDone =  parseFloat(route.height)
+        const meterTotal = this.meterDone + meterDone
+        const doneAt = Math.floor(new Date().getTime() / 1000)
+        const timeTook = doneAt - lastDone
+        const speed = getSpeed(meterDone, timeTook)
         this.speedData.push({
             meter: meterDone,
-            time: meterDoneAt,
+            meterTotal: meterTotal,
+            timeTook: timeTook,
+            time: doneAt,
             speed: speed
         })
         setItem('speedData', this.speedData)
-        this.chart.data.labels.push(asTime(meterDoneAt - this.started));
+        this.chart.data.labels.push(asTime(doneAt - this.started));
         this.chart.data.datasets[0].data.push(speed)
-        this.chart.data.datasets[1].data.push(meterDone)
+        this.chart.data.datasets[1].data.push(meterTotal)
         this.chart.update();
         this.render()
     }
@@ -135,6 +132,8 @@ export class HomeStart extends HTMLElement {
     }
 
     start() {
+        this.totalTime = parseTime(this.querySelector('input[name=time]').value)
+        this.totalMeter = this.querySelector('input[name=meter]').value
         this.started = Math.floor(new Date().getTime() / 1000)
         setItem('started', this.started)
         setItem('totalTime', this.totalTime)
@@ -185,7 +184,7 @@ export class HomeStart extends HTMLElement {
                         },
                         {
                             label: 'Total Meter',
-                            data: this.speedData.map(item=>item.meter),
+                            data: this.speedData.map(item=>item.meterTotal),
                             yAxisID: 'y1',
                         }
                     ]

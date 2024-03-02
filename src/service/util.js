@@ -1,6 +1,6 @@
 
-export function getSpeed(meter, tickTime, startTime) {
-    return meter / ((tickTime - startTime) / 60)
+export function getSpeed(meter, timeInSec) {
+    return meter / (timeInSec / 60)
 }
 
 export function asSpeed(speed) {

@@ -11,8 +11,8 @@ module.exports = {
     },
   ],
   mount: {
-     // src: '/walhalla/',
-     docs: '/walhalla/' // use for prod mode
+     src: '/walhalla/',
+     //docs: '/walhalla/' // use for prod mode
   },
   plugins: [
     /* ... */
