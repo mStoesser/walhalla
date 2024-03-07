@@ -23,7 +23,7 @@ export class TickRoutes extends HTMLElement {
             await this.loadRoutesAndRender();
         }
 
-        getItem('tickedRoutes', []).forEach(r=>this.tickedRoutes.add(r['route-links-href']))
+        getItem('tickedRoutes', []).forEach(route=>this.tickedRoutes.add(route.id))
     }
 
     render() {
@@ -47,7 +47,7 @@ export class TickRoutes extends HTMLElement {
                     ${this.foundRoutes.length > 0 ? html`
                     <div @click="${_=>this.clear()}" class="route cancel">CANCEL</div>
                     ${this.foundRoutes.map(route=> html`
-                        <div class="route ${this.tickedRoutes.has(route['route-links-href']) ? 'ticked' : ''}" @click="${e=>this.selectRoute(e, route)}">
+                        <div class="route ${this.tickedRoutes.has(route.id) ? 'ticked' : ''}" @click="${e=>this.selectRoute(e, route)}">
                             <span>${route.line.substring(0, 3)}</span>
                             <span>${route.name}</span>
                             <span>${route.grade}</span>
@@ -82,18 +82,17 @@ export class TickRoutes extends HTMLElement {
 
     selectRoute(e, route) {
         e.stopPropagation()
-        if(!this.tickedRoutes.has(route['route-links-href'])) {
+        if(!this.tickedRoutes.has(route.id)) {
             this.selectedRoute = route
             this.render()
         }
     }
 
     tickRoute() {
-        this.tickedRoutes.add(this.selectedRoute['route-links-href'])
+        this.tickedRoutes.add(this.selectedRoute.id)
         this.dispatchEvent(new CustomEvent('ticked', { detail: this.selectedRoute }))
         this.clear()
     }
-
 
     search(searchStr) {
         if (searchStr.length > 0)
@@ -102,8 +101,6 @@ export class TickRoutes extends HTMLElement {
             this.foundRoutes = []
         this.render()
     }
-
-
 }
 
 customElements.define("tick-routes", TickRoutes)

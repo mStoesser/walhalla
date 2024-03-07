@@ -15557,8 +15557,8 @@ var TickRoutes = /*#__PURE__*/function (_HTMLElement) {
               _context.next = 8;
               return this.loadRoutesAndRender();
             case 8:
-              getItem('tickedRoutes', []).forEach(function (r) {
-                return _this2.tickedRoutes.add(r['route-links-href']);
+              getItem('tickedRoutes', []).forEach(function (route) {
+                return _this2.tickedRoutes.add(route.id);
               });
             case 9:
             case "end":
@@ -15586,7 +15586,7 @@ var TickRoutes = /*#__PURE__*/function (_HTMLElement) {
       }) : x(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["\n                <div id=\"routeResult\">\n                    ", "\n                </div>\n            "])), this.foundRoutes.length > 0 ? x(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["\n                    <div @click=\"", "\" class=\"route cancel\">CANCEL</div>\n                    ", "\n                "])), function (_) {
         return _this3.clear();
       }, this.foundRoutes.map(function (route) {
-        return x(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n                        <div class=\"route ", "\" @click=\"", "\">\n                            <span>", "</span>\n                            <span>", "</span>\n                            <span>", "</span>\n                            <span>", "m</span>\n                        </div>\n                    "])), _this3.tickedRoutes.has(route['route-links-href']) ? 'ticked' : '', function (e) {
+        return x(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["\n                        <div class=\"route ", "\" @click=\"", "\">\n                            <span>", "</span>\n                            <span>", "</span>\n                            <span>", "</span>\n                            <span>", "m</span>\n                        </div>\n                    "])), _this3.tickedRoutes.has(route.id) ? 'ticked' : '', function (e) {
           return _this3.selectRoute(e, route);
         }, route.line.substring(0, 3), route.name, route.grade, route.height);
       })) : '')), this);
@@ -15641,7 +15641,7 @@ var TickRoutes = /*#__PURE__*/function (_HTMLElement) {
     key: "selectRoute",
     value: function selectRoute(e, route) {
       e.stopPropagation();
-      if (!this.tickedRoutes.has(route['route-links-href'])) {
+      if (!this.tickedRoutes.has(route.id)) {
         this.selectedRoute = route;
         this.render();
       }
@@ -15649,7 +15649,7 @@ var TickRoutes = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "tickRoute",
     value: function tickRoute() {
-      this.tickedRoutes.add(this.selectedRoute['route-links-href']);
+      this.tickedRoutes.add(this.selectedRoute.id);
       this.dispatchEvent(new CustomEvent('ticked', {
         detail: this.selectedRoute
       }));
