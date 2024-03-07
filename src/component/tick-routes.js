@@ -1,22 +1,28 @@
 import {html, render} from "lit-html";
-import {getItem} from "../service/storage-service";
+import {getItem, setItem} from "../service/storage-service";
 export class TickRoutes extends HTMLElement {
 
     routes = []
     foundRoutes = []
     tickedRoutes = new Set()
     selectedRoute = null
+    routeApi = 'https://p01--heavens-gate-routes-api--dn2jq92t54q6.code.run/routes';
 
     connectedCallback() {
         this.load()
         this.render()
     }
 
-    load() {
-        fetch(`/walhalla/assets/routes.json`).then(r=>r.json()).then(routes => {
-            this.routes = routes
+    async load() {
+        const savedRoutes = getItem('routes');
+
+        if (savedRoutes) {
+            this.routes = savedRoutes;
             this.render()
-        })
+        } else {
+            await this.loadRoutesAndRender();
+        }
+
         getItem('tickedRoutes', []).forEach(r=>this.tickedRoutes.add(r['route-links-href']))
     }
 
@@ -25,12 +31,13 @@ export class TickRoutes extends HTMLElement {
             <div>
                 <label>LineNr</label>
                 <input class="search" name="search" @keyup="${e=>this.search(e.target.value)}" type="number" placeholder="search">
+                <button @click="${_=>this.loadRoutesAndRender()}">RELOAD ROUTES</button>
             </div>
             ${this.selectedRoute ? html`
                 <div class="route">
-                    <span>${this.selectedRoute.line.substring(0, 3)}</span>
-                    <span>${this.selectedRoute['route-links']}</span>
-                    <span>${this.selectedRoute['vr-grade']}</span>
+                    <span>${this.selectedRoute.line}</span>
+                    <span>${this.selectedRoute.name}</span>
+                    <span>${this.selectedRoute.grade}</span>
                     <span>${this.selectedRoute.height}m</span>
                 </div>
                 <button @click="${_=>this.tickRoute()}">TICK</button>
@@ -42,8 +49,8 @@ export class TickRoutes extends HTMLElement {
                     ${this.foundRoutes.map(route=> html`
                         <div class="route ${this.tickedRoutes.has(route['route-links-href']) ? 'ticked' : ''}" @click="${e=>this.selectRoute(e, route)}">
                             <span>${route.line.substring(0, 3)}</span>
-                            <span>${route['route-links']}</span>
-                            <span>${route['vr-grade']}</span>
+                            <span>${route.name}</span>
+                            <span>${route.grade}</span>
                             <span>${route.height}m</span>
                         </div>
                     `)}
@@ -51,6 +58,15 @@ export class TickRoutes extends HTMLElement {
                 </div>
             `}
         `, this)
+    }
+
+    async loadRoutesAndRender() {
+        const response = await fetch(this.routeApi, {
+            headers: {Authorization: 'Bearer mytoken'}
+        });
+        this.routes = await response.json();
+        setItem('routes', this.routes);
+        this.render()
     }
 
     clear() {
@@ -63,6 +79,7 @@ export class TickRoutes extends HTMLElement {
         this.selectedRoute = null
         this.render()
     }
+
     selectRoute(e, route) {
         e.stopPropagation()
         if(!this.tickedRoutes.has(route['route-links-href'])) {

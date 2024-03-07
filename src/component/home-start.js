@@ -62,7 +62,7 @@ export class HomeStart extends HTMLElement {
         const timeTook = this.getLastTimeTook()
         render(html`
              <tick-routes @ticked="${e=>this.routeTicked(e.detail)}"></tick-routes>
-            
+
              <div class="overview-grid">
                  <span class="green">${asTime(timeGone)}</span>
                  ${this.started ? html`
@@ -70,7 +70,7 @@ export class HomeStart extends HTMLElement {
                  ` : html`
                      <input type="text" name="time" value="${asTime(this.totalTime)}">
                  `}
-                
+
                 <span class="green">${this.meterDone} m</span>
                  ${this.started ? html`
                      <span class="red">${this.totalMeter - this.meterDone} m</span>
@@ -79,7 +79,7 @@ export class HomeStart extends HTMLElement {
                  `}
                  <span class="green">${asMinuteTime(currentTimeTook)}</span>
                  <span class="red">${asMinuteTime(timeTook)}</span>
-                
+
                  <span class="${currentSpeed > this.aimedSpeed ? 'green' : 'red'}">${asSpeed(currentSpeed)}</span>
                  <span class="${lastSpeed > this.aimedSpeed ? 'green' : 'red'}">
                      <span>${asSpeed(lastSpeed)}</span>
@@ -88,19 +88,19 @@ export class HomeStart extends HTMLElement {
              </div>
 
              <div id="chart" style=""><canvas></canvas></div>
-            
+
              <div>
                  ${this.tickedRoutes.map(route => {
                      return html`
                          <div class="route ticked">
-                             <span>${route.line.substring(0, 3)}</span>
-                             <span>${route['route-links']}</span>
-                             <span>${route['vr-grade']}</span>
+                             <span>${route.line}</span>
+                             <span>${route.name}</span>
+                             <span>${route.grade}</span>
                              <span>${route.height}m</span>
                          </div>
                  `})}
              </div>
-            
+
             ${this.started ? html`
                 <button @click="${_=>this.reset()}">reset</button>`
             : html`
