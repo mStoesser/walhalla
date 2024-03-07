@@ -15527,6 +15527,7 @@ var TickRoutes = /*#__PURE__*/function (_HTMLElement) {
     _defineProperty(_assertThisInitialized(_this), "tickedRoutes", new Set());
     _defineProperty(_assertThisInitialized(_this), "selectedRoute", null);
     _defineProperty(_assertThisInitialized(_this), "routeApi", 'https://p01--heavens-gate-routes-api--dn2jq92t54q6.code.run/routes');
+    _defineProperty(_assertThisInitialized(_this), "apiToken", 'NdM~sPuEc2rAc5Rnz9LDF3EHT');
     return _this;
   }
   _createClass(TickRoutes, [{
@@ -15602,7 +15603,7 @@ var TickRoutes = /*#__PURE__*/function (_HTMLElement) {
               _context2.next = 2;
               return fetch(this.routeApi, {
                 headers: {
-                  Authorization: 'Bearer mytoken'
+                  Authorization: "Bearer ".concat(this.apiToken)
                 }
               });
             case 2:

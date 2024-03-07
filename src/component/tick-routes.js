@@ -7,6 +7,7 @@ export class TickRoutes extends HTMLElement {
     tickedRoutes = new Set()
     selectedRoute = null
     routeApi = 'https://p01--heavens-gate-routes-api--dn2jq92t54q6.code.run/routes';
+    apiToken = 'NdM~sPuEc2rAc5Rnz9LDF3EHT';
 
     connectedCallback() {
         this.load()
@@ -62,7 +63,7 @@ export class TickRoutes extends HTMLElement {
 
     async loadRoutesAndRender() {
         const response = await fetch(this.routeApi, {
-            headers: {Authorization: 'Bearer mytoken'}
+            headers: {Authorization: `Bearer ${this.apiToken}`}
         });
         this.routes = await response.json();
         setItem('routes', this.routes);
