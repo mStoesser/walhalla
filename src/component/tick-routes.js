@@ -40,6 +40,7 @@ export class TickRoutes extends HTMLElement {
                     <span>${this.selectedRoute.name}</span>
                     <span>${this.selectedRoute.grade}</span>
                     <span>${this.selectedRoute.height}m</span>
+                    <span class="route-color" style="background: ${this.selectedRoute.hexColor}"></span>
                 </div>
                 <button @click="${_=>this.tickRoute()}">TICK</button>
                 <button @click="${_=>this.cancelSelection()}">CANCEL</button>
@@ -53,6 +54,7 @@ export class TickRoutes extends HTMLElement {
                             <span>${route.name}</span>
                             <span>${route.grade}</span>
                             <span>${route.height}m</span>
+                            <span class="route-color" style="background: ${route.hexColor}"></span>
                         </div>
                     `)}
                 ` : ''}

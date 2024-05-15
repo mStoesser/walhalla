@@ -97,6 +97,7 @@ export class HomeStart extends HTMLElement {
                              <span>${route.name}</span>
                              <span>${route.grade}</span>
                              <span>${route.height}m</span>
+                             <span class="route-color" style="background: ${route.hexColor}"></span>
                          </div>
                  `})}
              </div>

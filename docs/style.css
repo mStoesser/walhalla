@@ -56,5 +56,12 @@ input.search { width: 50%; }
 
 #chart { width: max-content; margin: auto; }
 
-
+.route-color {
+    width: 22px;
+    aspect-ratio: 1;
+    display: inline-block;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -2px;
+}
 
