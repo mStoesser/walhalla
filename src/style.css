@@ -35,9 +35,21 @@ input,select,textarea { color: var(--text); background-color: var(--bg); border:
 
 
 tick-routes { display: block;margin-top: 1rem; }
-#routeResult { position: fixed; left: 25%; width: 50%; background-color: #333;}
+#routeResult {
+    position: fixed;
+    left: 10%;
+    width: 80%;
+    background-color: #333;
+}
 input.search { width: 50%; }
-.route {border-radius: 5px;background-color: indianred;padding: 1rem;margin: 1rem;}
+.route {
+    position: relative;
+    border-radius: 5px;
+    background-color: indianred;
+    padding: 1rem;
+    padding-left: calc(1rem + 30px);
+    margin: 1rem;
+}
 .route.ticked { background-color: darkolivegreen; }
 .route.cancel { background-color: var(--accent); color: var(--accent-text) }
 
@@ -61,7 +73,7 @@ input.search { width: 50%; }
     aspect-ratio: 1;
     display: inline-block;
     position: absolute;
-    margin-left: 10px;
+    left: 1rem;
     margin-top: -2px;
 }
 

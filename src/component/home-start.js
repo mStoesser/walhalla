@@ -93,11 +93,11 @@ export class HomeStart extends HTMLElement {
                  ${this.tickedRoutes.map(route => {
                      return html`
                          <div class="route ticked">
+                             <span class="route-color" style="background: ${route.hexColor}"></span>
                              <span>${route.line}</span>
                              <span>${route.name}</span>
                              <span>${route.grade}</span>
                              <span>${route.height}m</span>
-                             <span class="route-color" style="background: ${route.hexColor}"></span>
                          </div>
                  `})}
              </div>

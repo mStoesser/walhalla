@@ -36,11 +36,11 @@ export class TickRoutes extends HTMLElement {
             </div>
             ${this.selectedRoute ? html`
                 <div class="route">
+                    <span class="route-color" style="background: ${this.selectedRoute.hexColor}"></span>
                     <span>${this.selectedRoute.line}</span>
                     <span>${this.selectedRoute.name}</span>
                     <span>${this.selectedRoute.grade}</span>
                     <span>${this.selectedRoute.height}m</span>
-                    <span class="route-color" style="background: ${this.selectedRoute.hexColor}"></span>
                 </div>
                 <button @click="${_=>this.tickRoute()}">TICK</button>
                 <button @click="${_=>this.cancelSelection()}">CANCEL</button>
@@ -50,11 +50,11 @@ export class TickRoutes extends HTMLElement {
                     <div @click="${_=>this.clear()}" class="route cancel">CANCEL</div>
                     ${this.foundRoutes.map(route=> html`
                         <div class="route ${this.tickedRoutes.has(route.id) ? 'ticked' : ''}" @click="${e=>this.selectRoute(e, route)}">
+                            <span class="route-color" style="background: ${route.hexColor}"></span>
                             <span>${route.line.substring(0, 3)}</span>
                             <span>${route.name}</span>
                             <span>${route.grade}</span>
                             <span>${route.height}m</span>
-                            <span class="route-color" style="background: ${route.hexColor}"></span>
                         </div>
                     `)}
                 ` : ''}
