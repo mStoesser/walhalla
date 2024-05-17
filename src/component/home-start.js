@@ -247,34 +247,38 @@ export class HomeStart extends HTMLElement {
     routesPerArea = { 'Puréesilos': [], 'Neue Kartoffelhalle': [], 'Knödelsilos': [], 'Friteuse': []}
     routesPerLine = {}
     calcFreeRoutes() {
-        const allRoutes = getItem('routes', [])
-        const routesToClimb = allRoutes.filter(route => !this.tickedRoutes.find(ticked=>ticked.id == route.id))
-        Object.entries(groupBy(routesToClimb, 'area')).forEach(([area, routes]) => {
-            const routesPerGrade = routes.reduce((acc, cur)=>{
-                if(cur.grade.includes('4')) (acc['4'] = acc['4'] || []).push(cur);
-                else if(cur.grade.includes('5')) (acc['5'] = acc['5'] || []).push(cur);
-                else if(cur.grade.includes('6')) (acc['6'] = acc['6'] || []).push(cur);
-                else if(cur.grade.includes('7')) (acc['7'] = acc['7'] || []).push(cur);
-                else (acc['other'] = acc['other'] || []).push(cur);
-                return acc
-            },{})
-            this.routesPerArea[area] = Object.entries(routesPerGrade).map(([grade, routes])=> ({
-                grade: grade,
-                count: routes?.length || 0,
-                meter: routes?.reduce((a,c)=>a+c.height, 0) || 0,
-            }))
-        })
-        this.routesPerLine = {}
-        Object.entries(groupBy(routesToClimb, 'line')).forEach(([line, routes]) => {
-            if(routes.length === 0)
-                this.routesPerLine[line] = 'grey'
-            else if(routes.find(route => route.grade.includes('4') || route.grade.includes('5') || route.grade.includes('6')))
-                this.routesPerLine[line] = 'green'
-            else if(routes.find(route => route.grade.includes('7')))
-                this.routesPerLine[line] = 'red';
-            else
-                this.routesPerLine[line] = 'purple';
-        })
+        try {
+            const allRoutes = getItem('routes', [])
+            const routesToClimb = allRoutes.filter(route => !this.tickedRoutes.find(ticked => ticked.id == route.id))
+            Object.entries(groupBy(routesToClimb, 'area')).forEach(([area, routes]) => {
+                const routesPerGrade = routes.reduce((acc, cur) => {
+                    if (cur.grade.includes('4')) (acc['4'] = acc['4'] || []).push(cur);
+                    else if (cur.grade.includes('5')) (acc['5'] = acc['5'] || []).push(cur);
+                    else if (cur.grade.includes('6')) (acc['6'] = acc['6'] || []).push(cur);
+                    else if (cur.grade.includes('7')) (acc['7'] = acc['7'] || []).push(cur);
+                    else (acc['other'] = acc['other'] || []).push(cur);
+                    return acc
+                }, {})
+                this.routesPerArea[area] = Object.entries(routesPerGrade).map(([grade, routes]) => ({
+                    grade: grade,
+                    count: routes?.length || 0,
+                    meter: routes?.reduce((a, c) => a + c.height, 0) || 0,
+                }))
+            })
+            this.routesPerLine = {}
+            Object.entries(groupBy(routesToClimb, 'line')).forEach(([line, routes]) => {
+                if (routes.length === 0)
+                    this.routesPerLine[line] = 'grey'
+                else if (routes.find(route => route.grade.includes('4') || route.grade.includes('5') || route.grade.includes('6')))
+                    this.routesPerLine[line] = 'green'
+                else if (routes.find(route => route.grade.includes('7')))
+                    this.routesPerLine[line] = 'red';
+                else
+                    this.routesPerLine[line] = 'purple';
+            })
+        } catch (e) {
+            console.log('ohh ohh')
+        }
     }
 
     routeTicked(route) {
