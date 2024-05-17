@@ -16,6 +16,33 @@ function _isNativeReflectConstruct() {
     return !!t;
   })();
 }
+function _iterableToArrayLimit(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = !0,
+      o = !1;
+    try {
+      if (i = (t = t.call(r)).next, 0 === l) {
+        if (Object(t) !== t) return;
+        f = !1;
+      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+    } catch (r) {
+      o = !0, n = r;
+    } finally {
+      try {
+        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
+      } finally {
+        if (o) throw n;
+      }
+    }
+    return a;
+  }
+}
 function _regeneratorRuntime() {
   _regeneratorRuntime = function () {
     return e;
@@ -483,6 +510,28 @@ function _taggedTemplateLiteral(strings, raw) {
     }
   }));
 }
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+  return arr2;
+}
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
 
 /**
  * @license
@@ -502,6 +551,12 @@ function setItem(key, value) {
 
 function getSpeed(meter, timeInSec) {
   return meter / (timeInSec / 60);
+}
+function groupBy(arr, key) {
+  return arr.reduce(function (rv, x) {
+    (rv[x[key]] = rv[x[key]] || []).push(x);
+    return rv;
+  }, {});
 }
 function asSpeed(speed) {
   return speed == null ? 0.0.toFixed(2) : speed.toFixed(2);
@@ -15295,7 +15350,7 @@ const registerables = [
 Chart$1.register(...registerables);
 var Chart = Chart$1;
 
-var _templateObject$1, _templateObject2$1, _templateObject3$1, _templateObject4$1, _templateObject5$1, _templateObject6, _templateObject7, _templateObject8;
+var _templateObject$1, _templateObject2$1, _templateObject3$1, _templateObject4$1, _templateObject5$1, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
 var HomeStart = /*#__PURE__*/function (_HTMLElement) {
   function HomeStart() {
     var _this;
@@ -15311,6 +15366,13 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
     _defineProperty(_this, "tickedRoutes", []);
     _defineProperty(_this, "speedData", []);
     _defineProperty(_this, "chart", null);
+    _defineProperty(_this, "routesPerArea", {
+      'Puréesilos': [],
+      'Neue Kartoffelhalle': [],
+      'Knödelsilos': [],
+      'Friteuse': []
+    });
+    _defineProperty(_this, "routesPerLine", {});
     return _this;
   }
   _inherits(HomeStart, _HTMLElement);
@@ -15336,6 +15398,7 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
       this.aimedSpeed = this.totalMeter / (this.totalTime / 60);
       this.tickedRoutes = getItem('tickedRoutes', []);
       this.speedData = getItem('speedData', []);
+      this.calcFreeRoutes();
       if (this.started) this.startInterval();
     }
   }, {
@@ -15375,15 +15438,68 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
       var speedChange = currentSpeed - lastSpeed;
       var currentTimeTook = currentTime - this.getLastTime();
       var timeTook = this.getLastTimeTook();
-      j(x(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral(["\n             <tick-routes @ticked=\"", "\"></tick-routes>\n\n             <div class=\"overview-grid\">\n                 <span class=\"green\">", "</span>\n                 ", "\n\n                <span class=\"green\">", " m</span>\n                 ", "\n                 <span class=\"green\">", "</span>\n                 <span class=\"red\">", "</span>\n\n                 <span class=\"", "\">", "</span>\n                 <span class=\"", "\">\n                     <span>", "</span>\n                     <span class=\"", "\">(", ")</span>\n                 </span>\n             </div>\n\n             <div id=\"chart\" style=\"\"><canvas></canvas></div>\n\n             <div>\n                 ", "\n             </div>\n\n            ", "\n        "])), function (e) {
+      j(x(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral(["\n             <tick-routes @ticked=\"", "\"></tick-routes>\n\n             <div class=\"overview-grid\">\n                 <span class=\"green\">", "</span>\n                 ", "\n\n                <span class=\"green\">", " m</span>\n                 ", "\n                 <span class=\"green\">", "</span>\n                 <span class=\"red\">", "</span>\n\n                 <span class=\"", "\">", "</span>\n                 <span class=\"", "\">\n                     <span>", "</span>\n                     <span class=\"", "\">(", ")</span>\n                 </span>\n             </div>\n\n             <div id=\"chart\" style=\"\"><canvas></canvas></div>\n\n\n             <button @click=\"", "\">Show Free Routes</button>\n             <div id=\"freeRoutes\">\n                 <div class=\"area\">\n                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"90%\" viewBox=\"150 120 250 170\" >\n                         <rect x=\"154\" y=\"122\" width=\"80\" height=\"80\" fill=\"#e1d5e7\" stroke=\"#9673a6\" pointer-events=\"all\"/>\n                         <rect x=\"234\" y=\"122\" width=\"80\" height=\"80\" fill=\"#e1d5e7\" stroke=\"#9673a6\" pointer-events=\"all\"/>\n                         <rect x=\"314\" y=\"122\" width=\"80\" height=\"80\" fill=\"#e1d5e7\" stroke=\"#9673a6\" pointer-events=\"all\"/>\n                         <rect x=\"154\" y=\"202\" width=\"80\" height=\"80\" fill=\"#e1d5e7\" stroke=\"#9673a6\" pointer-events=\"all\"/>\n                         <text x=\"216\" y=\"277\" text-anchor=\"middle\" fill=\"", "\">101</text>\n                         <text x=\"182\" y=\"277\" text-anchor=\"middle\" fill=\"", "\">102</text>\n                         <text x=\"167\" y=\"260\" text-anchor=\"middle\" fill=\"", "\">104</text>\n                         <text x=\"167\" y=\"234\" text-anchor=\"middle\" fill=\"", "\">105</text>\n                         <text x=\"191\" y=\"217\" text-anchor=\"middle\" fill=\"", "\">107</text>\n                         <text x=\"200\" y=\"198\" text-anchor=\"middle\" fill=\"", "\">201</text>\n                         <text x=\"167\" y=\"198\" text-anchor=\"middle\" fill=\"", "\">202</text>\n                         <text x=\"167\" y=\"180\" text-anchor=\"middle\" fill=\"", "\">203</text>\n                         <text x=\"167\" y=\"157\" text-anchor=\"middle\" fill=\"", "\">204</text>\n                         <text x=\"175\" y=\"134\" text-anchor=\"middle\" fill=\"", "\">206</text>\n                         <text x=\"202\" y=\"134\" text-anchor=\"middle\" fill=\"", "\">207</text>\n                         <text x=\"224\" y=\"134\" text-anchor=\"middle\" fill=\"", "\">208</text>\n                         <text x=\"246\" y=\"180\" text-anchor=\"middle\" fill=\"", "\">301</text>\n                         <text x=\"246\" y=\"157\" text-anchor=\"middle\" fill=\"", "\">302</text>\n                         <text x=\"253\" y=\"134\" text-anchor=\"middle\" fill=\"", "\">304</text>\n                         <text x=\"278\" y=\"134\" text-anchor=\"middle\" fill=\"", "\">305</text>\n                         <text x=\"302\" y=\"134\" text-anchor=\"middle\" fill=\"", "\">306</text>\n                         <text x=\"302\" y=\"157\" text-anchor=\"middle\" fill=\"", "\">307</text>\n                         <text x=\"302\" y=\"180\" text-anchor=\"middle\" fill=\"", "\">308</text>\n                         <text x=\"325\" y=\"157\" text-anchor=\"middle\" fill=\"", "\">402</text>\n                         <text x=\"336\" y=\"134\" text-anchor=\"middle\" fill=\"", "\">403</text>\n                         <text x=\"362\" y=\"134\" text-anchor=\"middle\" fill=\"", "\">404</text>\n                         <text x=\"383\" y=\"134\" text-anchor=\"middle\" fill=\"", "\">405</text>\n                         <text x=\"383\" y=\"157\" text-anchor=\"middle\" fill=\"", "\">406</text>\n                         <text x=\"383\" y=\"180\" text-anchor=\"middle\" fill=\"", "\">407</text>\n                         <text x=\"370\" y=\"198\" text-anchor=\"middle\" fill=\"", "\">409</text>\n                         <text x=\"344\" y=\"198\" text-anchor=\"middle\" fill=\"", "\">410</text>\n                     </svg>\n                     <div>\n                         <h2>Pur\xE9esilos</h2>\n                         <div class=\"available-routes\">\n                            ", "\n                        </div>\n                     </div>\n                 </div>\n                 <div class=\"area\">\n                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"90%\" viewBox=\"312 200 170 170\" >\n                         <rect x=\"314\" y=\"202\" width=\"80\" height=\"80\" fill=\"#ffe6cc\" stroke=\"#d79b00\" pointer-events=\"all\"/>\n                         <rect x=\"394\" y=\"282\" width=\"80\" height=\"80\" fill=\"#ffe6cc\" stroke=\"#d79b00\" pointer-events=\"all\"/>\n                         <rect x=\"314\" y=\"282\" width=\"80\" height=\"80\" fill=\"#fff2cc\" stroke=\"#d6b656\" pointer-events=\"all\"/>\n                         <rect x=\"394\" y=\"202\" width=\"80\" height=\"80\" fill=\"#fff2cc\" stroke=\"#d6b656\" pointer-events=\"all\"/>\n                         <path d=\"M 314 362 L 394 282\" fill=\"none\" stroke=\"#663300\" stroke-miterlimit=\"10\" pointer-events=\"stroke\"/>\n                         <rect x=\"314\" y=\"233\" width=\"24\" height=\"14\" fill=\"#ffb366\" stroke=\"#cc6600\" pointer-events=\"all\"/>\n                         <text x=\"340\" y=\"360\" text-anchor=\"middle\" fill=\"", "\">501</text>\n                         <text x=\"364\" y=\"336\" text-anchor=\"middle\" fill=\"", "\">502</text>\n                         <text x=\"383\" y=\"315\" text-anchor=\"middle\" fill=\"", "\">503</text>\n                         <text x=\"362\" y=\"297\" text-anchor=\"middle\" fill=\"", "\">504</text>\n                         <text x=\"344\" y=\"320\" text-anchor=\"middle\" fill=\"", "\">505</text>\n                         <text x=\"326\" y=\"339\" text-anchor=\"middle\" fill=\"", "\">506</text>\n                         <text x=\"327\" y=\"281\" text-anchor=\"middle\" fill=\"", "\">601</text>\n                         <text x=\"326\" y=\"260\" text-anchor=\"middle\" fill=\"", "\">602</text>\n                         <text x=\"351\" y=\"244\" text-anchor=\"middle\" fill=\"", "\">603</text>\n                         <text x=\"327\" y=\"230\" text-anchor=\"middle\" fill=\"", "\">604</text>\n                         <text x=\"326\" y=\"214\" text-anchor=\"middle\" fill=\"", "\">605</text>\n                         <text x=\"348\" y=\"214\" text-anchor=\"middle\" fill=\"", "\">606</text>\n                         <text x=\"373\" y=\"214\" text-anchor=\"middle\" fill=\"", "\">607</text>\n                         <text x=\"383\" y=\"225\" text-anchor=\"middle\" fill=\"", "\">608</text>\n                         <text x=\"406\" y=\"279\" text-anchor=\"middle\" fill=\"", "\">701</text>\n                         <text x=\"433\" y=\"279\" text-anchor=\"middle\" fill=\"", "\">702</text>\n                         <text x=\"462\" y=\"279\" text-anchor=\"middle\" fill=\"", "\">703</text>\n                         <text x=\"406\" y=\"255\" text-anchor=\"middle\" fill=\"", "\">704</text>\n                         <text x=\"434\" y=\"297\" text-anchor=\"middle\" fill=\"", "\">801</text>\n                         <text x=\"462\" y=\"297\" text-anchor=\"middle\" fill=\"", "\">802</text>\n                         <text x=\"462\" y=\"320\" text-anchor=\"middle\" fill=\"", "\">803</text>\n                         <text x=\"461\" y=\"342\" text-anchor=\"middle\" fill=\"", "\">804</text>\n                         <text x=\"446\" y=\"357\" text-anchor=\"middle\" fill=\"", "\">805</text>\n                         <text x=\"415\" y=\"357\" text-anchor=\"middle\" fill=\"", "\">806</text>\n                     </svg>\n                     <div>\n                         <h2>Kn\xF6delsilos</h2>\n                         <div class=\"available-routes\">\n                            ", "\n                        </div>\n                     </div>\n                 </div>\n                 <div class=\"area\">\n                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"90%\" viewBox=\"150 360 330 160\" >\n                         <rect x=\"154\" y=\"362\" width=\"320\" height=\"148\" fill=\"#ffe6cc\" stroke=\"#d79b00\" pointer-events=\"all\"/>\n                         <text x=\"406\" y=\"381\" text-anchor=\"middle\" fill=\"", "\">901</text>\n                         <text x=\"441\" y=\"381\" text-anchor=\"middle\" fill=\"", "\">902</text>\n                         <text x=\"454\" y=\"393\" text-anchor=\"middle\" fill=\"", "\">903</text>\n                         <text x=\"454\" y=\"429\" text-anchor=\"middle\" fill=\"", "\">904</text>\n                         <text x=\"454\" y=\"463\" text-anchor=\"middle\" fill=\"", "\">905</text>\n                         <text x=\"454\" y=\"499\" text-anchor=\"middle\" fill=\"", "\">906</text>\n                         <text x=\"411\" y=\"499\" text-anchor=\"middle\" fill=\"", "\">907</text>\n                         <text x=\"293\" y=\"499\" text-anchor=\"middle\" fill=\"", "\">909</text>\n                         <text x=\"251\" y=\"499\" text-anchor=\"middle\" fill=\"", "\">910</text>\n                         <text x=\"216\" y=\"499\" text-anchor=\"middle\" fill=\"", "\">911</text>\n                         <text x=\"180\" y=\"499\" text-anchor=\"middle\" fill=\"", "\">912</text>\n                         <text x=\"181\" y=\"440\" text-anchor=\"middle\" fill=\"", "\">913</text>\n                         <text x=\"180\" y=\"381\" text-anchor=\"middle\" fill=\"", "\">914</text>\n                         <text x=\"216\" y=\"381\" text-anchor=\"middle\" fill=\"", "\">915</text>\n                         <text x=\"253\" y=\"381\" text-anchor=\"middle\" fill=\"", "\">916</text>\n                         <text x=\"288\" y=\"381\" text-anchor=\"middle\" fill=\"", "\">917</text>\n                         <text x=\"318\" y=\"381\" text-anchor=\"middle\" fill=\"", "\">918</text>\n                     </svg>\n                     <div>\n                         <h2>Neue Kartoffelhalle</h2>\n                         <div class=\"available-routes\">\n                            ", "\n                        </div>\n                     </div>\n                 </div>\n                 <div class=\"area\">\n                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"90%\" viewBox=\"150 505 330 135\" >\n                         <rect x=\"154\" y=\"510\" width=\"320\" height=\"120\" fill=\"#ffe6cc\" stroke=\"#d79b00\" pointer-events=\"all\"/>\n                         <text x=\"171\" y=\"615\" text-anchor=\"middle\" fill=\"", "\">D01</text>\n                         <text x=\"169\" y=\"567\" text-anchor=\"middle\" fill=\"", "\">D02</text>\n                         <text x=\"171\" y=\"529\" text-anchor=\"middle\" fill=\"", "\">D03</text>\n                         <text x=\"213\" y=\"529\" text-anchor=\"middle\" fill=\"", "\">D04</text>\n                         <text x=\"253\" y=\"529\" text-anchor=\"middle\" fill=\"", "\">D05</text>\n                         <text x=\"293\" y=\"529\" text-anchor=\"middle\" fill=\"", "\">D06</text>\n                         <text x=\"330\" y=\"529\" text-anchor=\"middle\" fill=\"", "\">D07</text>\n                         <text x=\"402\" y=\"529\" text-anchor=\"middle\" fill=\"", "\">D08</text>\n                         <text x=\"446\" y=\"529\" text-anchor=\"middle\" fill=\"", "\">D09</text>\n                     </svg>\n                     <div>\n                         <h2>Friteuse</h2>\n                         <div class=\"available-routes\">\n                             ", "\n                         </div>\n                     </div>\n                 </div>\n             </div>\n             <div>\n                 ", "\n             </div>\n\n            ", "\n        "])), function (e) {
         return _this2.routeTicked(e.detail);
-      }, asTime(timeGone), this.started ? x(_templateObject2$1 || (_templateObject2$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", "</span>\n                 "])), asTime(this.totalTime - timeGone)) : x(_templateObject3$1 || (_templateObject3$1 = _taggedTemplateLiteral(["\n                     <input type=\"text\" name=\"time\" value=\"", "\">\n                 "])), asTime(this.totalTime)), this.meterDone, this.started ? x(_templateObject4$1 || (_templateObject4$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", " m</span>\n                 "])), this.totalMeter - this.meterDone) : x(_templateObject5$1 || (_templateObject5$1 = _taggedTemplateLiteral(["\n                     <input type=\"number\" name=\"meter\" value=\"", "\">\n                 "])), this.totalMeter), asMinuteTime(currentTimeTook), asMinuteTime(timeTook), currentSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(currentSpeed), lastSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(lastSpeed), speedChange >= 0 ? 'green' : 'red', asSpeed(speedChange), this.tickedRoutes.map(function (route) {
-        return x(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["\n                         <div class=\"route ticked\">\n                             <span class=\"route-color\" style=\"background: ", "\"></span>\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "m</span>\n                         </div>\n                 "])), route.hexColor, route.line, route.name, route.grade, route.height);
-      }), this.started ? x(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">reset</button>"])), function (_) {
+      }, asTime(timeGone), this.started ? x(_templateObject2$1 || (_templateObject2$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", "</span>\n                 "])), asTime(this.totalTime - timeGone)) : x(_templateObject3$1 || (_templateObject3$1 = _taggedTemplateLiteral(["\n                     <input type=\"text\" name=\"time\" value=\"", "\">\n                 "])), asTime(this.totalTime)), this.meterDone, this.started ? x(_templateObject4$1 || (_templateObject4$1 = _taggedTemplateLiteral(["\n                     <span class=\"red\">", " m</span>\n                 "])), this.totalMeter - this.meterDone) : x(_templateObject5$1 || (_templateObject5$1 = _taggedTemplateLiteral(["\n                     <input type=\"number\" name=\"meter\" value=\"", "\">\n                 "])), this.totalMeter), asMinuteTime(currentTimeTook), asMinuteTime(timeTook), currentSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(currentSpeed), lastSpeed > this.aimedSpeed ? 'green' : 'red', asSpeed(lastSpeed), speedChange >= 0 ? 'green' : 'red', asSpeed(speedChange), function (_) {
+        return _this2.querySelector('#freeRoutes').classList.toggle('hidden');
+      }, this.routesPerLine['101'], this.routesPerLine['102'], this.routesPerLine['104'], this.routesPerLine['105'], this.routesPerLine['107'], this.routesPerLine['201'], this.routesPerLine['202'], this.routesPerLine['203'], this.routesPerLine['204'], this.routesPerLine['206'], this.routesPerLine['207'], this.routesPerLine['208'], this.routesPerLine['301'], this.routesPerLine['302'], this.routesPerLine['304'], this.routesPerLine['305'], this.routesPerLine['306'], this.routesPerLine['307'], this.routesPerLine['308'], this.routesPerLine['402'], this.routesPerLine['403'], this.routesPerLine['404'], this.routesPerLine['405'], this.routesPerLine['406'], this.routesPerLine['407'], this.routesPerLine['409'], this.routesPerLine['410'], this.routesPerArea['Puréesilos'].map(function (data) {
+        return x(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["<span>", "</span><span>", "</span><span>", "m</span>"])), data.grade, data.count, data.meter);
+      }), this.routesPerLine['501'], this.routesPerLine['502'], this.routesPerLine['503'], this.routesPerLine['504'], this.routesPerLine['505'], this.routesPerLine['506'], this.routesPerLine['601'], this.routesPerLine['602'], this.routesPerLine['603'], this.routesPerLine['604'], this.routesPerLine['605'], this.routesPerLine['606'], this.routesPerLine['607'], this.routesPerLine['608'], this.routesPerLine['701'], this.routesPerLine['702'], this.routesPerLine['703'], this.routesPerLine['704'], this.routesPerLine['801'], this.routesPerLine['802'], this.routesPerLine['803'], this.routesPerLine['804'], this.routesPerLine['805'], this.routesPerLine['806'], this.routesPerArea['Knödelsilos'].map(function (data) {
+        return x(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["<span>", "</span><span>", "</span><span>", "m</span>"])), data.grade, data.count, data.meter);
+      }), this.routesPerLine['901'], this.routesPerLine['902'], this.routesPerLine['903'], this.routesPerLine['904'], this.routesPerLine['905'], this.routesPerLine['906'], this.routesPerLine['907'], this.routesPerLine['909'], this.routesPerLine['910'], this.routesPerLine['911'], this.routesPerLine['912'], this.routesPerLine['913'], this.routesPerLine['914'], this.routesPerLine['915'], this.routesPerLine['916'], this.routesPerLine['917'], this.routesPerLine['918'], this.routesPerArea['Neue Kartoffelhalle'].map(function (data) {
+        return x(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["<span>", "</span><span>", "</span><span>", "m</span>"])), data.grade, data.count, data.meter);
+      }), this.routesPerLine['001'], this.routesPerLine['002'], this.routesPerLine['003'], this.routesPerLine['004'], this.routesPerLine['005'], this.routesPerLine['006'], this.routesPerLine['007'], this.routesPerLine['008'], this.routesPerLine['009'], this.routesPerArea['Friteuse'].map(function (data) {
+        return x(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["<span>", "</span><span>", "</span><span>", "m</span>"])), data.grade, data.count, data.meter);
+      }), this.tickedRoutes.map(function (route) {
+        return x(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n                         <div class=\"route ticked\">\n                             <span class=\"route-color\" style=\"background: ", "\"></span>\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "m</span>\n                         </div>\n                 "])), route.hexColor, route.line, route.name, route.grade, route.height);
+      }), this.started ? x(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">reset</button>"])), function (_) {
         return _this2.reset();
-      }) : x(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">start</button>\n            "])), function (_) {
+      }) : x(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">start</button>\n            "])), function (_) {
         return _this2.start();
       })), this);
+    }
+  }, {
+    key: "calcFreeRoutes",
+    value: function calcFreeRoutes() {
+      var _this3 = this;
+      var allRoutes = getItem('routes', []);
+      var routesToClimb = allRoutes.filter(function (route) {
+        return !_this3.tickedRoutes.find(function (ticked) {
+          return ticked.id == route.id;
+        });
+      });
+      Object.entries(groupBy(routesToClimb, 'area')).forEach(function (_ref) {
+        var _ref2 = _slicedToArray(_ref, 2),
+          area = _ref2[0],
+          routes = _ref2[1];
+        var routesPerGrade = routes.reduce(function (acc, cur) {
+          if (cur.grade.includes('4')) (acc['4'] = acc['4'] || []).push(cur);else if (cur.grade.includes('5')) (acc['5'] = acc['5'] || []).push(cur);else if (cur.grade.includes('6')) (acc['6'] = acc['6'] || []).push(cur);else if (cur.grade.includes('7')) (acc['7'] = acc['7'] || []).push(cur);else (acc['other'] = acc['other'] || []).push(cur);
+          return acc;
+        }, {});
+        _this3.routesPerArea[area] = Object.entries(routesPerGrade).map(function (_ref3) {
+          var _ref4 = _slicedToArray(_ref3, 2),
+            grade = _ref4[0],
+            routes = _ref4[1];
+          return {
+            grade: grade,
+            count: (routes === null || routes === void 0 ? void 0 : routes.length) || 0,
+            meter: (routes === null || routes === void 0 ? void 0 : routes.reduce(function (a, c) {
+              return a + c.height;
+            }, 0)) || 0
+          };
+        });
+      });
+      this.routesPerLine = {};
+      Object.entries(groupBy(routesToClimb, 'line')).forEach(function (_ref5) {
+        var _ref6 = _slicedToArray(_ref5, 2),
+          line = _ref6[0],
+          routes = _ref6[1];
+        if (routes.length === 0) _this3.routesPerLine[line] = 'grey';else if (routes.find(function (route) {
+          return route.grade.includes('4') || route.grade.includes('5') || route.grade.includes('6');
+        })) _this3.routesPerLine[line] = 'green';else if (routes.find(function (route) {
+          return route.grade.includes('7');
+        })) _this3.routesPerLine[line] = 'red';else _this3.routesPerLine[line] = 'purple';
+      });
     }
   }, {
     key: "routeTicked",
@@ -15408,6 +15524,7 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
       this.chart.data.datasets[0].data.push(speed);
       this.chart.data.datasets[1].data.push(meterTotal);
       this.chart.update();
+      this.calcFreeRoutes();
       this.render();
     }
   }, {
@@ -15442,6 +15559,13 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
         this.started = null;
         this.speedData = [];
         this.tickedRoutes = [];
+        this.routesPerArea = {
+          'Puréesilos': [],
+          'Neue Kartoffelhalle': [],
+          'Knödelsilos': [],
+          'Friteuse': []
+        };
+        this.routesPerLine = {};
         setItem('started', this.started);
         setItem('speedData', this.speedData);
         setItem('tickedRoutes', this.tickedRoutes);
@@ -15452,9 +15576,9 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "startInterval",
     value: function startInterval() {
-      var _this3 = this;
+      var _this4 = this;
       this.intervalTimer = setInterval(function () {
-        return _this3.render();
+        return _this4.render();
       }, 1000);
     }
   }, {
@@ -15471,14 +15595,14 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "setupChart",
     value: function setupChart() {
-      var _this4 = this;
+      var _this5 = this;
       this.canvas = this.querySelector('#chart canvas');
       this.setCanvasSize();
       this.chart = new Chart(this.canvas, {
         type: 'line',
         data: {
           labels: this.speedData.map(function (item) {
-            return asTime(item.time - _this4.started);
+            return asTime(item.time - _this5.started);
           }),
           datasets: [{
             label: 'Speed',
