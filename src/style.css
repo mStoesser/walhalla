@@ -77,4 +77,7 @@ input.search { width: 50%; }
     left: 1rem;
     margin-top: -2px;
 }
-
+.area { display: grid; grid-template-columns: 1fr 1fr;}
+.available-routes { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.hidden { display: none; }
+text { font-family: Helvetica; font-size: 12px; font-weight: bold; }
