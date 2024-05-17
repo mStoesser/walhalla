@@ -173,7 +173,7 @@ export class HomeStart extends HTMLElement {
                             ${this.routesPerArea['Knödelsilos'].map(data=> html`<span>${data.grade}</span><span>${data.count}</span><span>${data.meter}m</span>`)}
                         </div>
                      </div>
-                 </div>  
+                 </div>
                  <div class="area">
                      <svg xmlns="http://www.w3.org/2000/svg" width="90%" viewBox="150 360 330 160" >
                          <rect x="154" y="362" width="320" height="148" fill="#ffe6cc" stroke="#d79b00" pointer-events="all"/>
@@ -247,7 +247,7 @@ export class HomeStart extends HTMLElement {
     routesPerArea = { 'Puréesilos': [], 'Neue Kartoffelhalle': [], 'Knödelsilos': [], 'Friteuse': []}
     routesPerLine = {}
     calcFreeRoutes() {
-        const allRoutes = getItem('routes')
+        const allRoutes = getItem('routes', [])
         const routesToClimb = allRoutes.filter(route => !this.tickedRoutes.find(ticked=>ticked.id == route.id))
         Object.entries(groupBy(routesToClimb, 'area')).forEach(([area, routes]) => {
             const routesPerGrade = routes.reduce((acc, cur)=>{
