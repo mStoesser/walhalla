@@ -3,6 +3,13 @@ export function getSpeed(meter, timeInSec) {
     return meter / (timeInSec / 60)
 }
 
+export function groupBy(arr, key) {
+    return arr.reduce((rv, x) => {
+        (rv[x[key]] = rv[x[key]] || []).push(x);
+        return rv;
+    }, {});
+}
+
 export function asSpeed(speed) {
     return speed == null ? 0.0.toFixed(2) : speed.toFixed(2)
 }
