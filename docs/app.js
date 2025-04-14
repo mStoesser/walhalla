@@ -15445,8 +15445,10 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
         return x(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["<span>", "</span><span>", "</span><span>", "m</span>"])), data.grade, data.count, data.meter);
       }), this.tickedRoutes.map(function (route) {
         return x(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n                         <div class=\"route ticked\">\n                             <span class=\"route-color\" style=\"background: ", "\"></span>\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "</span>\n                             <span>", "m</span>\n                         </div>\n                 "])), route.hexColor, route.line, route.name, route.grade, route.height);
-      }), this.started ? x(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">reset</button>"])), function (_) {
+      }), this.started ? x(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">reset</button>\n                <button @click=\"", "\">export</button> "])), function (_) {
         return _this2.reset();
+      }, function (_) {
+        return _this2.doExport();
       }) : x(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n                <button @click=\"", "\">start</button>\n            "])), function (_) {
         return _this2.start();
       })), this);
@@ -15569,6 +15571,24 @@ var HomeStart = /*#__PURE__*/function (_HTMLElement) {
         clearInterval(this.intervalTimer);
         this.render();
       }
+    }
+  }, {
+    key: "doExport",
+    value: function doExport() {
+      var data = {
+        started: getItem('started'),
+        totalTime: getItem('totalTime', 8 * 60 * 60),
+        totalMeter: getItem('totalMeter', 1300),
+        aimedSpeed: this.totalMeter / (this.totalTime / 60),
+        tickedRoutes: getItem('tickedRoutes', []),
+        speedData: getItem('speedData', [])
+      };
+      var element = document.createElement('a');
+      element.setAttribute("href", "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data)));
+      element.setAttribute("download", 'export-data.json');
+      document.body.appendChild(element); // required for firefox
+      element.click();
+      element.remove();
     }
   }, {
     key: "startInterval",
