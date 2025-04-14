@@ -237,7 +237,8 @@ export class HomeStart extends HTMLElement {
              </div>
 
             ${this.started ? html`
-                <button @click="${_=>this.reset()}">reset</button>`
+                <button @click="${_=>this.reset()}">reset</button>
+                <button @click="${_=>this.doExport()}">export</button> `
             : html`
                 <button @click="${_=>this.start()}">start</button>
             `}
@@ -341,6 +342,24 @@ export class HomeStart extends HTMLElement {
             clearInterval(this.intervalTimer);
             this.render()
         }
+    }
+
+    doExport() {
+        const data = {
+            started: getItem('started'),
+            totalTime: getItem('totalTime', 8 * 60 * 60),
+            totalMeter: getItem('totalMeter', 1300),
+            aimedSpeed: this.totalMeter / (this.totalTime / 60),
+            tickedRoutes: getItem('tickedRoutes', []),
+            speedData:  getItem('speedData', []),
+        }
+
+        const element = document.createElement('a');
+        element.setAttribute("href", "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(data)));
+        element.setAttribute("download", 'export-data.json')
+        document.body.appendChild(element); // required for firefox
+        element.click();
+        element.remove();
     }
 
     startInterval() {
